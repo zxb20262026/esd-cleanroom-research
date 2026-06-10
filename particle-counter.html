@@ -5,32 +5,26 @@
 :root{--bg:#0d1117;--bg-card:#161b22;--border:#30363d;--text:#e6edf3;--text-secondary:#8b949e;--text-tertiary:#6e7681;--accent:#58a6ff;--accent2:#3fb950;--accent3:#d2991d;--accent5:#a371f7;--accent6:#79c0ff;--danger:#f85149;--radius:12px;--radius-sm:8px}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
-.nav{position:sticky;top:0;z-index:100;background:rgba(13,17,23,0.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:8px 16px;display:flex;align-items:center;gap:6px;overflow-x:auto}
+.nav{position:sticky;top:0;z-index:100;background:rgba(13,17,23,0.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:8px 16px;display:flex;align-items:center;gap:5px;overflow-x:auto}
 .nav-brand{font-weight:700;font-size:14px;white-space:nowrap;background:linear-gradient(135deg,var(--accent),var(--accent5));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .nav a{color:var(--text-secondary);text-decoration:none;font-size:11px;white-space:nowrap;padding:3px 7px;border-radius:5px;transition:all 0.2s}
 .nav a:hover{color:var(--text);background:var(--bg-card)}
 .nav a.active{color:var(--accent);background:rgba(88,166,255,0.1)}
-.nav .sep{color:var(--border);margin:0 1px;font-size:9px}
-.container{max-width:1100px;margin:0 auto;padding:20px}
-.hero{text-align:center;padding:40px 20px 30px;background:linear-gradient(180deg,rgba(88,166,255,0.06) 0%,transparent 100%);border-bottom:1px solid var(--border);margin-bottom:28px}
-.hero h1{font-size:26px;font-weight:800;margin-bottom:8px;background:linear-gradient(135deg,#58a6ff,#a371f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero .subtitle{color:var(--text-secondary);font-size:14px}
-.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px;margin:20px 0}
-.card-link{display:block;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:16px 14px;text-decoration:none;transition:all 0.2s}
-.card-link:hover{border-color:var(--accent);background:var(--bg-card);transform:translateY(-2px)}
-.card-link .card-emoji{font-size:28px;margin-bottom:6px}
-.card-link .card-title{color:var(--text);font-size:14px;font-weight:700;margin-bottom:3px}
-.card-link .card-desc{color:var(--text-secondary);font-size:11px}
+.container{max-width:1140px;margin:0 auto;padding:20px}
 .page-title{font-size:22px;font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:8px}
 .tag{font-size:11px;padding:1px 8px;border-radius:10px;font-weight:600;white-space:nowrap}
 .tag-hot{background:rgba(248,81,73,0.15);color:var(--danger)}
 .tag-mid{background:rgba(210,153,29,0.15);color:var(--accent3)}
 .tag-low{background:rgba(110,118,129,0.15);color:var(--text-tertiary)}
-.tag-new{background:rgba(163,113,247,0.15);color:var(--accent5)}
 .badge{display:inline-block;padding:1px 7px;border-radius:8px;font-size:10px;font-weight:600;white-space:nowrap}
 .badge-green{background:rgba(63,185,80,0.15);color:var(--accent2)}
 .badge-yellow{background:rgba(210,153,29,0.15);color:var(--accent3)}
 .price-range{font-family:'SF Mono',monospace;font-size:11px;color:var(--accent6);white-space:nowrap}
+.params-callout{background:rgba(163,113,247,0.06);border:1px solid rgba(163,113,247,0.2);border-radius:var(--radius-sm);padding:12px 16px;margin:10px 0}
+.params-callout .ptitle{font-size:12px;color:var(--accent5);font-weight:600;margin-bottom:8px}
+.params-callout .pgrid{display:flex;flex-wrap:wrap;gap:6px 18px}
+.params-callout .pitem{font-size:11px;color:var(--text-secondary)}
+.params-callout .pkey{color:var(--text);font-weight:500}
 .analysis-box{background:rgba(88,166,255,0.04);border:1px solid rgba(88,166,255,0.15);border-radius:var(--radius-sm);padding:14px 18px;margin-top:16px}
 .analysis-box h4{color:var(--accent);font-size:13px;margin-bottom:6px}
 .analysis-box p{font-size:12px;color:var(--text-secondary)}
@@ -38,31 +32,24 @@ table{width:100%;border-collapse:collapse;margin:12px 0;font-size:12px}
 th{text-align:left;padding:8px 10px;background:rgba(255,255,255,0.04);border-bottom:2px solid var(--border);color:var(--text-secondary);font-weight:600;font-size:10px;text-transform:uppercase;white-space:nowrap}
 td{padding:8px 10px;border-bottom:1px solid var(--border);vertical-align:top}
 tr:hover td{background:rgba(255,255,255,0.02)}
-.exec{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px 24px;margin-bottom:24px}
-.exec h2{font-size:17px;margin-bottom:10px;color:var(--accent2)}
-.exec p{font-size:13px;color:var(--text-secondary)}
-.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:14px}
-.mcard{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:var(--radius-sm);padding:12px;text-align:center}
-.mcard .val{font-size:20px;font-weight:700;color:var(--accent)}
-.mcard .lab{font-size:10px;color:var(--text-secondary);margin-top:3px}
-.priority-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin:16px 0}
-.pcard{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:16px;border-left:3px solid var(--accent2)}
-.pcard.p2{border-left-color:var(--accent3)}
-.pcard h4{font-size:13px;margin-bottom:6px}
-.pcard p{font-size:11px;color:var(--text-secondary)}
+.volume-bar{display:flex;align-items:center;gap:6px}
+.volume-bar .vbar{height:3px;border-radius:2px;background:var(--border);width:50px;overflow:hidden}
+.volume-bar .vfill{height:100%;border-radius:2px}
+.volume-bar .vlabel{font-size:10px;color:var(--text-secondary);white-space:nowrap}
 footer{text-align:center;padding:28px 20px;border-top:1px solid var(--border);margin-top:40px;color:var(--text-tertiary);font-size:11px}
 footer a{color:var(--accent)}
 .scroll-top{position:fixed;bottom:20px;right:20px;width:38px;height:38px;border-radius:50%;background:var(--accent);color:#fff;border:none;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.3s;z-index:99}
 .scroll-top.visible{opacity:1}
-.toc{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:20px}
-.toc a{padding:3px 10px;border:1px solid var(--border);border-radius:14px;font-size:11px;color:var(--text-secondary);text-decoration:none;transition:all 0.2s}
-.toc a:hover{border-color:var(--accent);color:var(--accent)}
-@media(max-width:768px){.container{padding:14px 10px}table{display:block;overflow-x:auto}.card-grid{grid-template-columns:repeat(2,1fr)}}
+.summary-banner{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-bottom:24px}
+.summary-item{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px;text-align:center}
+.summary-item .val{font-size:20px;font-weight:700}
+.summary-item .lab{font-size:10px;color:var(--text-secondary);margin-top:3px}
+@media(max-width:768px){.container{padding:14px 10px}table{display:block;overflow-x:auto}}
 </style></head>
 <body><nav class="nav">
-  <a href="index.html" class="nav-brand">⚡ 静电无尘 · 电商调研</a>
-  <span class="sep">|</span>
-  <a href="index.html">🏠首页</a>
+  <a href="index.html" class="nav-brand">⚡ 静电无尘 · 调研</a>
+  <span style="color:var(--border);margin:0 1px;font-size:9px">|</span>
+  <a href="index.html">🏠</a>
   <a href="cleanroom-suit.html">👕无尘服</a>
   <a href="esd-gloves.html">🧤手套</a>
   <a href="esd-shoes.html">👟鞋</a>
@@ -77,20 +64,65 @@ footer a{color:var(--accent)}
   <a href="esd-tools.html">🔧工具</a>
 </nav>
 <div class="container">
-  <div class="page-title"><span style="font-size:28px;">🔬</span>粒子计数器/检测仪<span class="tag tag-low">专业仪器</span></div>
-  <p style="color:var(--text-secondary);font-size:13px;margin-bottom:6px;">粒子计数器 — 洁净室检测核心仪器，国产替代正在进行</p>
-  <p style="font-size:11px;color:var(--text-tertiary);margin-bottom:20px;">所属大类：检测仪器 · 热销品牌：PMS(20%)、TSI(15%)、苏信(10%)、华泰(8%)</p>
-  <table><thead><tr><th style="width:28%">二级子类</th><th style="width:14%">价格区间</th><th style="width:12%">电商适配</th><th style="width:46%">市场体量参考</th></tr></thead><tbody><tr><td><strong>手持式粒子计数器</strong><br><span style="font-size:10px;color:var(--text-tertiary)">2.83L/min · 0.3/0.5/1.0/5.0μm · 充电式</span></td><td class="price-range">¥2000-8000</td><td><span class="badge badge-green">⭐3/5</span></td><td>月搜0.5-1万</td></tr>
-<tr><td><strong>台式粒子计数器</strong><br><span style="font-size:10px;color:var(--text-tertiary)">28.3L/min · 6通道 · 大屏触控</span></td><td class="price-range">¥8000-30000</td><td><span class="badge badge-green">⭐2/5</span></td><td>月搜0.1-0.3万</td></tr>
-<tr><td><strong>表面电阻测试仪</strong><br><span style="font-size:10px;color:var(--text-tertiary)">10³-10¹²Ω · 重锤式 · 便携</span></td><td class="price-range">¥500-3000</td><td><span class="badge badge-green">⭐4/5</span></td><td>月搜0.5-1万</td></tr>
-<tr><td><strong>静电场测试仪</strong><br><span style="font-size:10px;color:var(--text-tertiary)">0-±20kV · 非接触 · 手持式</span></td><td class="price-range">¥300-2000</td><td><span class="badge badge-green">⭐4/5</span></td><td>月搜0.3-0.8万</td></tr>
+  <div class="page-title"><span style="font-size:28px;">🔬</span> 粒子计数器/检测仪<span class="tag tag-low">专业仪器</span></div>
+  <p style="color:var(--text-secondary);font-size:13px;margin-bottom:4px;">洁净室检测核心仪器。国产替代加速，手持式2.83L/min是电商最佳入门品类。</p>
+  <p style="font-size:11px;color:var(--text-tertiary);margin-bottom:18px;">所属大类：检测仪器 · 热销品牌：PMS(20%)、TSI(15%)、苏信(10%)、华泰(8%)</p>
+  
+  <div class="params-callout">
+    <div class="ptitle">📐 核心细分参数</div>
+    <div class="pgrid"><span class="pitem"><span class="pkey">仪器类型</span>：手持式粒子计数器 / 台式粒子计数器 / 在线式传感器 / 表面电阻测试仪 / 静电场测试仪</span>
+<span class="pitem"><span class="pkey">采样流量</span>：2.83L/min(手持) / 28.3L/min(标准台式) / 50L/min / 100L/min</span>
+<span class="pitem"><span class="pkey">粒径通道</span>：2通道(0.3/0.5μm入门) / 4通道 / 6通道(专业)</span>
+<span class="pitem"><span class="pkey">检测范围</span>：粒子计数 / 表面电阻 / 静电场 / 温湿度 / 压差</span>
+<span class="pitem"><span class="pkey">数据输出</span>：LCD显示 / USB导出 / WiFi/蓝牙 / 打印机</span>
+</div>
+  </div>
+  
+  <table>
+  <thead><tr>
+    <th style="width:22%">二级子类（参数组合）</th>
+    <th style="width:12%">价格区间</th>
+    <th style="width:10%">电商适配</th>
+    <th style="width:32%">市场体量参考</th>
+    <th style="width:24%">代表品牌</th>
+  </tr></thead>
+  <tbody><tr>
+        <td><strong>手持式粒子计数器(2.83L)</strong><br><span style="font-size:10px;color:var(--text-tertiary)">2.83L/min · 0.3/0.5/1.0/5.0μm · 充电式 · 触屏</span></td>
+        <td class="price-range">¥2500-8000</td>
+        <td><span class="badge badge-green">⭐3/5</span></td>
+        <td><div class="volume-bar"><div class="vbar"><div class="vfill" style="width:50%;background:var(--accent3)"></div></div><span class="vlabel">月搜0.3-0.8万 · GMV 0.5-1.5亿</span></div></td>
+        <td style="font-size:11px;color:var(--text-secondary);">苏信、华泰</td>
+        </tr>
+<tr>
+        <td><strong>台式粒子计数器(28.3L)</strong><br><span style="font-size:10px;color:var(--text-tertiary)">28.3L/min · 6通道 · 大屏触控 · 内置打印机</span></td>
+        <td class="price-range">¥8000-25000</td>
+        <td><span class="badge badge-green">⭐2/5</span></td>
+        <td><div class="volume-bar"><div class="vbar"><div class="vfill" style="width:50%;background:var(--accent3)"></div></div><span class="vlabel">月搜0.05-0.15万 · 专业采购</span></div></td>
+        <td style="font-size:11px;color:var(--text-secondary);">PMS、TSI、苏信</td>
+        </tr>
+<tr>
+        <td><strong>表面电阻测试仪</strong><br><span style="font-size:10px;color:var(--text-tertiary)">10³-10¹²Ω · 重锤式 · 便携 · 电池供电</span></td>
+        <td class="price-range">¥500-2500</td>
+        <td><span class="badge badge-green">⭐4/5</span></td>
+        <td><div class="volume-bar"><div class="vbar"><div class="vfill" style="width:50%;background:var(--accent3)"></div></div><span class="vlabel">月搜0.4-0.8万 · GMV 0.2-0.5亿</span></div></td>
+        <td style="font-size:11px;color:var(--text-secondary);">沪试、华泰</td>
+        </tr>
+<tr>
+        <td><strong>静电场测试仪</strong><br><span style="font-size:10px;color:var(--text-tertiary)">0-±20kV · 非接触式 · 手持式 · 数显</span></td>
+        <td class="price-range">¥300-1800</td>
+        <td><span class="badge badge-green">⭐4/5</span></td>
+        <td><div class="volume-bar"><div class="vbar"><div class="vfill" style="width:50%;background:var(--accent3)"></div></div><span class="vlabel">月搜0.3-0.6万 · GMV 0.2-0.4亿</span></div></td>
+        <td style="font-size:11px;color:var(--text-secondary);">SIMCO、沪试</td>
+        </tr>
 </tbody></table>
-  <div class="analysis-box"><h4>🎯 切入建议</h4><p>表面电阻测试仪+静电场测试仪 ¥300-1500更适合电商切入（门槛低、出货量大）。手持式粒子计数器做中远期布局。标品+服务模式：购买送第三方校准报告。</p></div>
-</div><footer>
-  <p>⚡ 静电无尘行业 · 电商拓展调研报告 v1.0 | 数据来源：天猫/京东/1688公开数据 + 行业报告 · 2026年6月</p>
+  
+  <div class="analysis-box"><h4>🎯 切入建议</h4><p>表面电阻测试仪+静电场测试仪 ¥300-1500更适合电商切入（门槛低、出货快）。手持式粒子计数器中远期布局。核心差异化：'购机送第三方校准证书+免费软件升级'。仪器是高信任品类，需建立专业品牌形象。</p></div>
+</div>
+<footer>
+  <p>⚡ 静电无尘行业 · 电商拓展调研 v1.1 | 数据来源：天猫/京东/1688 + 行业报告 · 2026年6月</p>
+  <p style="margin-top:4px;font-size:10px;color:var(--text-tertiary);">※ 搜索量级与GMV为多维度估算，非平台官方数据</p>
   <p style="margin-top:6px;"><a href="https://github.com/zxb20262026/esd-cleanroom-research" target="_blank">GitHub</a> · <a href="index.html">返回首页</a> · Made with ⚡️</p>
 </footer>
 <button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
-<script>window.addEventListener('scroll',()=>{document.getElementById('scrollTopBtn').classList.toggle('visible',window.scrollY>400)});</script><script>
-(function(){var p=location.pathname.split('/').pop()||'index.html';document.querySelectorAll('.nav a').forEach(function(a){if(a.getAttribute('href')===p)a.classList.add('active')});})();
-</script></body></html>
+<script>window.addEventListener('scroll',()=>{document.getElementById('scrollTopBtn').classList.toggle('visible',window.scrollY>400)});
+(function(){var p=location.pathname.split('/').pop()||'index.html';document.querySelectorAll('.nav a').forEach(function(a){if(a.getAttribute('href')===p)a.classList.add('active')});})();</script></body></html>
