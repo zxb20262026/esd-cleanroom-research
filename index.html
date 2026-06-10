@@ -305,6 +305,11 @@ function switchTab(id,btn){document.querySelectorAll('.tab-panel').forEach(p=>p.
 function toggleCat(head){var b=head.nextElementSibling,a=head.querySelector('.cat-section-arrow');b.classList.toggle('open');a.classList.toggle('open');}
 function toggleSku(head){var p=head.nextElementSibling,b=head.querySelector('.sku-toggle-btn');p.classList.toggle('open');b.textContent=p.classList.contains('open')?'收起参数 ▴':'展开参数 ▾';}
 window.addEventListener('load',function(){
+// Auto-expand all categories & SKU params
+document.querySelectorAll('.cat-section-body').forEach(b=>b.classList.add('open'));
+document.querySelectorAll('.cat-section-arrow').forEach(a=>a.classList.add('open'));
+document.querySelectorAll('.sku-params').forEach(p=>p.classList.add('open'));
+document.querySelectorAll('.sku-toggle-btn').forEach(b=>b.textContent='收起参数 ▴');
 Chart.defaults.color='#8b949e';Chart.defaults.borderColor='#30363d';
 var L=['人体ESD','静电消除','防静电工具','包装材料','检测仪器','地坪材料','洁净防护服','洁净室耗材'];
 new Chart(document.getElementById('chartMarket'),{type:'doughnut',data:{labels:L,datasets:[{data:[25,5,5,4,4,4,20,8],backgroundColor:['#58a6ff','#3fb950','#a371f7','#d2991d','#79c0ff','#f85149','#3fb950','#58a6ff'],borderWidth:1}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{font:{size:9},boxWidth:8,color:'#8b949e'}}}}});
