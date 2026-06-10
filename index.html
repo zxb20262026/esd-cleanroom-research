@@ -313,7 +313,7 @@ new Chart(document.getElementById('chartRadar'),{type:'radar',data:{labels:['市
 new Chart(document.getElementById('chartConv'),{type:'bar',data:{labels:['无参数','仅材质','+尺寸','+认证','+场景','+完整参数'],datasets:[{label:'转化率%',data:[0,15,30,50,65,90],backgroundColor:['#6e7681','#8b949e','#d2991d','#a371f7','#58a6ff','#3fb950'],borderRadius:3}]},options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{beginAtZero:true,max:100,ticks:{callback:function(v){return v+'%'}},grid:{color:'#30363d'}},y:{ticks:{color:'#8b949e'}}}}});
 new Chart(document.getElementById('chartBrand'),{type:'bar',data:{labels:['3M','杜邦','金佰利','安思尔','SIMCO','沪试','苏净','思创','贝尔克','白牌'],datasets:[{label:'份额%',data:[15,12,10,8,5,10,6,5,4,25],backgroundColor:['#58a6ff','#58a6ff','#58a6ff','#58a6ff','#58a6ff','#d2991d','#d2991d','#d2991d','#d2991d','#6e7681'],borderRadius:2}]},options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{beginAtZero:true,max:28,grid:{color:'#30363d'},ticks:{color:'#8b949e'}},y:{ticks:{color:'#8b949e'}}}}});
 new Chart(document.getElementById('chartImport'),{type:'bar',data:{labels:['人体ESD','静电消除','防静工具','包装材料','检测仪器','洁净防护','洁净耗材'],datasets:[{label:'进口%',data:[55,65,30,20,70,45,40],backgroundColor:'rgba(88,166,255,0.7)',borderRadius:3},{label:'国产%',data:[45,35,70,80,30,55,60],backgroundColor:'rgba(210,153,29,0.7)',borderRadius:3}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'top',labels:{font:{size:9},color:'#8b949e'}}},scales:{x:{stacked:true,ticks:{color:'#8b949e'},grid:{color:'#30363d'}},y:{stacked:true,beginAtZero:true,max:100,ticks:{color:'#8b949e'},grid:{color:'#30363d'}}}}});
-}});
+});
 </script>
 </body>
 </html>
