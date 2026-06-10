@@ -1,165 +1,2174 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>静电无尘行业 · 电商拓展调研</title><style>
-:root{--bg:#0d1117;--bg-card:#161b22;--border:#30363d;--text:#e6edf3;--text-secondary:#8b949e;--text-tertiary:#6e7681;--accent:#58a6ff;--accent2:#3fb950;--accent3:#d2991d;--accent5:#a371f7;--accent6:#79c0ff;--danger:#f85149;--radius:12px;--radius-sm:8px}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
-.nav{position:sticky;top:0;z-index:100;background:rgba(13,17,23,0.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:8px 16px;display:flex;align-items:center;gap:6px;overflow-x:auto}
-.nav-brand{font-weight:700;font-size:14px;white-space:nowrap;background:linear-gradient(135deg,var(--accent),var(--accent5));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.nav a{color:var(--text-secondary);text-decoration:none;font-size:11px;white-space:nowrap;padding:3px 7px;border-radius:5px;transition:all 0.2s}
-.nav a:hover{color:var(--text);background:var(--bg-card)}
-.nav a.active{color:var(--accent);background:rgba(88,166,255,0.1)}
-.nav .sep{color:var(--border);margin:0 1px;font-size:9px}
-.container{max-width:1100px;margin:0 auto;padding:20px}
-.hero{text-align:center;padding:40px 20px 30px;background:linear-gradient(180deg,rgba(88,166,255,0.06) 0%,transparent 100%);border-bottom:1px solid var(--border);margin-bottom:28px}
-.hero h1{font-size:26px;font-weight:800;margin-bottom:8px;background:linear-gradient(135deg,#58a6ff,#a371f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero .subtitle{color:var(--text-secondary);font-size:14px}
-.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px;margin:20px 0}
-.card-link{display:block;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:16px 14px;text-decoration:none;transition:all 0.2s}
-.card-link:hover{border-color:var(--accent);background:var(--bg-card);transform:translateY(-2px)}
-.card-link .card-emoji{font-size:28px;margin-bottom:6px}
-.card-link .card-title{color:var(--text);font-size:14px;font-weight:700;margin-bottom:3px}
-.card-link .card-desc{color:var(--text-secondary);font-size:11px}
-.page-title{font-size:22px;font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:8px}
-.tag{font-size:11px;padding:1px 8px;border-radius:10px;font-weight:600;white-space:nowrap}
-.tag-hot{background:rgba(248,81,73,0.15);color:var(--danger)}
-.tag-mid{background:rgba(210,153,29,0.15);color:var(--accent3)}
-.tag-low{background:rgba(110,118,129,0.15);color:var(--text-tertiary)}
-.tag-new{background:rgba(163,113,247,0.15);color:var(--accent5)}
-.badge{display:inline-block;padding:1px 7px;border-radius:8px;font-size:10px;font-weight:600;white-space:nowrap}
-.badge-green{background:rgba(63,185,80,0.15);color:var(--accent2)}
-.badge-yellow{background:rgba(210,153,29,0.15);color:var(--accent3)}
-.price-range{font-family:'SF Mono',monospace;font-size:11px;color:var(--accent6);white-space:nowrap}
-.analysis-box{background:rgba(88,166,255,0.04);border:1px solid rgba(88,166,255,0.15);border-radius:var(--radius-sm);padding:14px 18px;margin-top:16px}
-.analysis-box h4{color:var(--accent);font-size:13px;margin-bottom:6px}
-.analysis-box p{font-size:12px;color:var(--text-secondary)}
-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:12px}
-th{text-align:left;padding:8px 10px;background:rgba(255,255,255,0.04);border-bottom:2px solid var(--border);color:var(--text-secondary);font-weight:600;font-size:10px;text-transform:uppercase;white-space:nowrap}
-td{padding:8px 10px;border-bottom:1px solid var(--border);vertical-align:top}
-tr:hover td{background:rgba(255,255,255,0.02)}
-.exec{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px 24px;margin-bottom:24px}
-.exec h2{font-size:17px;margin-bottom:10px;color:var(--accent2)}
-.exec p{font-size:13px;color:var(--text-secondary)}
-.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:14px}
-.mcard{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:var(--radius-sm);padding:12px;text-align:center}
-.mcard .val{font-size:20px;font-weight:700;color:var(--accent)}
-.mcard .lab{font-size:10px;color:var(--text-secondary);margin-top:3px}
-.priority-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin:16px 0}
-.pcard{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:16px;border-left:3px solid var(--accent2)}
-.pcard.p2{border-left-color:var(--accent3)}
-.pcard h4{font-size:13px;margin-bottom:6px}
-.pcard p{font-size:11px;color:var(--text-secondary)}
-footer{text-align:center;padding:28px 20px;border-top:1px solid var(--border);margin-top:40px;color:var(--text-tertiary);font-size:11px}
-footer a{color:var(--accent)}
-.scroll-top{position:fixed;bottom:20px;right:20px;width:38px;height:38px;border-radius:50%;background:var(--accent);color:#fff;border:none;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.3s;z-index:99}
-.scroll-top.visible{opacity:1}
-.toc{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:20px}
-.toc a{padding:3px 10px;border:1px solid var(--border);border-radius:14px;font-size:11px;color:var(--text-secondary);text-decoration:none;transition:all 0.2s}
-.toc a:hover{border-color:var(--accent);color:var(--accent)}
-@media(max-width:768px){.container{padding:14px 10px}table{display:block;overflow-x:auto}.card-grid{grid-template-columns:repeat(2,1fr)}}
-</style></head>
-<body><nav class="nav">
-  <a href="index.html" class="nav-brand">⚡ 静电无尘 · 电商调研</a>
-  <span class="sep">|</span>
-  <a href="index.html">🏠首页</a>
-  <a href="cleanroom-suit.html">👕无尘服</a>
-  <a href="esd-gloves.html">🧤手套</a>
-  <a href="esd-shoes.html">👟鞋</a>
-  <a href="esd-mat.html">🟩桌垫</a>
-  <a href="ion-fan.html">⚡风机</a>
-  <a href="esd-wristband.html">⌚手环</a>
-  <a href="cleanroom-wipes.html">🧻无尘布</a>
-  <a href="cleanroom-consumables.html">😷耗材</a>
-  <a href="ffu-air-shower.html">🏗️FFU</a>
-  <a href="esd-bag.html">📦包装袋</a>
-  <a href="particle-counter.html">🔬检测仪</a>
-  <a href="esd-tools.html">🔧工具</a>
-</nav>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>静电无尘行业 · 品类参数深度调研 v2.0</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --primary: #1a6fe8;
+    --primary-light: #e8f1fd;
+    --accent: #00c9a7;
+    --accent2: #f97316;
+    --danger: #ef4444;
+    --bg: #f0f4fb;
+    --card: #ffffff;
+    --text: #1e293b;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --shadow: 0 4px 20px rgba(26,111,232,0.08);
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'PingFang SC','Microsoft YaHei',sans-serif; background: var(--bg); color: var(--text); }
+
+  .hero {
+    background: linear-gradient(135deg, #0a2a6e 0%, #1a6fe8 50%, #00c9a7 100%);
+    color: #fff; padding: 56px 32px 48px; text-align: center; position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  .hero-tag { display: inline-block; background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; padding: 4px 16px; font-size: 13px; margin-bottom: 14px; letter-spacing: 1px; }
+  .hero h1 { font-size: clamp(22px,4vw,38px); font-weight: 800; margin-bottom: 10px; }
+  .hero p { font-size: 15px; opacity: .85; max-width: 640px; margin: 0 auto 24px; }
+  .hero-stats { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; }
+  .hero-stat { text-align: center; }
+  .hero-stat .num { font-size: 28px; font-weight: 800; }
+  .hero-stat .label { font-size: 12px; opacity: .7; }
+
+  .tab-nav {
+    display: flex; gap: 6px; flex-wrap: wrap; justify-content: center;
+    padding: 20px 16px 0; background: var(--card); border-bottom: 2px solid var(--border);
+    position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .tab-btn { padding: 9px 18px; border-radius: 8px 8px 0 0; border: none; cursor: pointer; font-size: 13px; font-weight: 600; background: transparent; color: var(--muted); transition: all .2s; }
+  .tab-btn:hover { background: var(--primary-light); color: var(--primary); }
+  .tab-btn.active { background: var(--primary); color: #fff; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 28px 16px 60px; }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  .sec-title { font-size: 20px; font-weight: 700; color: var(--text); margin: 32px 0 16px; display: flex; align-items: center; gap: 10px; }
+  .sec-title::before { content: ''; display: inline-block; width: 4px; height: 20px; background: var(--primary); border-radius: 2px; }
+
+  /* ===== SUMMARY CARDS ===== */
+  .summary-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(180px,1fr)); gap: 14px; margin-bottom: 28px; }
+  .s-card { background: var(--card); border-radius: var(--radius); padding: 18px 14px; text-align: center; box-shadow: var(--shadow); border-top: 3px solid var(--primary); transition: transform .2s; }
+  .s-card:hover { transform: translateY(-3px); }
+  .s-card .ico { font-size: 26px; margin-bottom: 6px; }
+  .s-card .val { font-size: 24px; font-weight: 800; color: var(--primary); }
+  .s-card .lbl { font-size: 12px; color: var(--muted); margin-top: 4px; }
+
+  /* ===== CATEGORY ACCORDION ===== */
+  .cat-section { margin-bottom: 36px; }
+  .cat-section-head {
+    display: flex; align-items: center; gap: 14px;
+    background: var(--card); border-radius: var(--radius); padding: 18px 22px;
+    box-shadow: var(--shadow); cursor: pointer;
+    border-left: 5px solid var(--primary);
+    transition: all .2s;
+  }
+  .cat-section-head:hover { transform: translateX(3px); }
+  .cat-icon-big { font-size: 32px; width: 56px; height: 56px; border-radius: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .cat-section-info { flex: 1; }
+  .cat-section-name { font-size: 18px; font-weight: 800; }
+  .cat-section-sub { font-size: 13px; color: var(--muted); margin-top: 4px; }
+  .cat-section-badges { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+  .cat-section-arrow { font-size: 20px; color: var(--muted); transition: transform .3s; }
+  .cat-section-arrow.open { transform: rotate(180deg); }
+  .cat-section-body { display: none; padding: 8px 0 0; }
+  .cat-section-body.open { display: block; }
+
+  /* ===== SKU PARAM CARDS ===== */
+  .sku-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(320px,1fr)); gap: 16px; padding: 4px 0 8px; }
+  .sku-card {
+    background: #fff; border-radius: 12px;
+    border: 1px solid var(--border); overflow: hidden;
+    transition: box-shadow .2s, transform .2s;
+  }
+  .sku-card:hover { box-shadow: 0 6px 24px rgba(26,111,232,0.12); transform: translateY(-2px); }
+  .sku-head {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 12px 14px; background: #f8fafc; border-bottom: 1px solid var(--border);
+    cursor: pointer;
+  }
+  .sku-name { font-size: 14px; font-weight: 700; }
+  .sku-price-hot { display: flex; gap: 8px; align-items: center; flex-shrink: 0; }
+  .sku-price { font-size: 13px; font-weight: 700; color: var(--accent2); }
+  .hot-tag { font-size: 10px; padding: 2px 6px; border-radius: 3px; font-weight: 700; }
+  .hot-h { background: #fee2e2; color: #b91c1c; }
+  .hot-m { background: #fef3c7; color: #92400e; }
+  .hot-l { background: #f1f5f9; color: #64748b; }
+  .sku-toggle-btn { font-size: 12px; color: var(--primary); font-weight: 600; cursor: pointer; padding: 0 0 0 8px; white-space: nowrap; }
+
+  .sku-params { display: none; padding: 12px 14px 14px; }
+  .sku-params.open { display: block; }
+
+  /* Param rows */
+  .param-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  .param-table tr { border-bottom: 1px dashed #e9eef5; }
+  .param-table tr:last-child { border: none; }
+  .param-table td:first-child { color: var(--muted); padding: 5px 8px 5px 0; white-space: nowrap; font-weight: 600; width: 96px; }
+  .param-table td:last-child { color: var(--text); padding: 5px 0; line-height: 1.5; }
+  .param-highlight { display: inline-block; background: #eff6ff; color: #1d4ed8; padding: 1px 6px; border-radius: 3px; font-size: 11px; font-weight: 600; margin: 1px 2px; }
+  .param-warn { display: inline-block; background: #fff7ed; color: #c2410c; padding: 1px 6px; border-radius: 3px; font-size: 11px; font-weight: 600; margin: 1px 2px; }
+  .param-ok { display: inline-block; background: #f0fdf4; color: #166534; padding: 1px 6px; border-radius: 3px; font-size: 11px; font-weight: 600; margin: 1px 2px; }
+
+  /* ===== MATRIX TABLE ===== */
+  .matrix-wrap { overflow-x: auto; background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px; }
+  .matrix-table { width: 100%; border-collapse: collapse; font-size: 12.5px; min-width: 900px; }
+  .matrix-table th { background: var(--primary); color: #fff; padding: 10px 10px; text-align: center; font-weight: 600; }
+  .matrix-table td { padding: 9px 10px; text-align: center; border-bottom: 1px solid var(--border); }
+  .matrix-table tr:nth-child(even) td { background: #f8fafc; }
+  .matrix-table tr:hover td { background: var(--primary-light); }
+  .stars { color: #f59e0b; }
+  .priority-tag { display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; }
+  .p1 { background: #dcfce7; color: #166534; }
+  .p2 { background: #dbeafe; color: #1e40af; }
+  .p3 { background: #fef9c3; color: #854d0e; }
+  .p4 { background: #f1f5f9; color: #475569; }
+
+  /* ===== CHARTS ===== */
+  .chart-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(320px,1fr)); gap: 24px; }
+  .chart-box { background: var(--card); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); }
+  .chart-title { font-size: 15px; font-weight: 700; margin-bottom: 16px; color: var(--text); }
+  .chart-wrap { position: relative; height: 280px; }
+
+  /* ===== STRATEGY ===== */
+  .timeline { position: relative; padding-left: 28px; }
+  .timeline::before { content: ''; position: absolute; left: 10px; top: 0; bottom: 0; width: 2px; background: var(--border); }
+  .tl-item { position: relative; margin-bottom: 28px; }
+  .tl-dot { position: absolute; left: -24px; top: 4px; width: 14px; height: 14px; border-radius: 50%; border: 3px solid var(--card); box-shadow: 0 0 0 2px var(--primary); }
+  .tl-phase { font-size: 12px; color: var(--primary); font-weight: 700; margin-bottom: 4px; }
+  .tl-title { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+  .tl-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tl-tag { font-size: 12px; padding: 3px 10px; border-radius: 20px; background: var(--primary-light); color: var(--primary); font-weight: 500; }
+
+  /* badges */
+  .badge { font-size: 11px; padding: 3px 8px; border-radius: 4px; font-weight: 600; }
+  .badge-green { background: #d1fae5; color: #065f46; }
+  .badge-blue { background: #dbeafe; color: #1e40af; }
+  .badge-orange { background: #ffedd5; color: #9a3412; }
+  .badge-purple { background: #ede9fe; color: #5b21b6; }
+  .badge-red { background: #fee2e2; color: #991b1b; }
+
+  .insight-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(260px,1fr)); gap: 16px; }
+  .insight-card { background: var(--card); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); border-left: 4px solid; }
+  .insight-card.blue { border-color: var(--primary); }
+  .insight-card.green { border-color: var(--accent); }
+  .insight-card.orange { border-color: var(--accent2); }
+  .insight-card.red { border-color: var(--danger); }
+  .insight-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; }
+  .insight-card p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+  footer { text-align: center; padding: 20px; color: var(--muted); font-size: 12px; background: var(--card); border-top: 1px solid var(--border); }
+
+  @media(max-width:640px) {
+    .hero { padding: 36px 16px 32px; }
+    .sku-grid { grid-template-columns: 1fr; }
+    .cat-section-head { padding: 14px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
 <div class="hero">
-  <h1>⚡ 静电无尘行业 · 电商拓展调研</h1>
-  <p class="subtitle">12大品类 × 40+细分 · 防静电/洁净室全维度电商适销分析</p>
+  <div class="hero-tag">⚡ 2026 深度参数调研报告</div>
+  <h1>静电无尘行业 · 品类参数深度调研</h1>
+  <p>8大类目 · 60+细分品类 · 每类核心技术参数 · 市场份额对比 · 选品关键指标</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="num">8</div><div class="label">核心大类</div></div>
+    <div class="hero-stat"><div class="num">60+</div><div class="label">细分品类</div></div>
+    <div class="hero-stat"><div class="num">15+</div><div class="label">每品类核心参数</div></div>
+    <div class="hero-stat"><div class="num">120亿+</div><div class="label">全球市场(美元)</div></div>
+  </div>
 </div>
+
+<!-- TAB NAV -->
+<div class="tab-nav">
+  <button class="tab-btn active" onclick="switchTab('overview',this)">📊 市场总览</button>
+  <button class="tab-btn" onclick="switchTab('params',this)">🔬 品类参数详解</button>
+  <button class="tab-btn" onclick="switchTab('matrix',this)">📋 对比矩阵</button>
+  <button class="tab-btn" onclick="switchTab('charts',this)">📈 数据图表</button>
+  <button class="tab-btn" onclick="switchTab('matrix',this)">📋 份额&对比</button>
+  <button class="tab-btn" onclick="switchTab('charts',this)">📈 数据图表</button>
+  <button class="tab-btn" onclick="switchTab('strategy',this)">🚀 拓品策略</button>
+</div>
+
 <div class="container">
-<section class="exec">
-  <h2>📊 执行摘要</h2>
-  <div class="metrics">
-    <div class="mcard"><div class="val">12</div><div class="lab">核心品类</div></div>
-    <div class="mcard"><div class="val">40+</div><div class="lab">二级细分子类</div></div>
-    <div class="mcard"><div class="val">800亿+</div><div class="lab">中国洁净室耗材市场</div></div>
-    <div class="mcard"><div class="val">20%</div><div class="lab">线上渗透率(增长中)</div></div>
-    <div class="mcard"><div class="val">¥50-300</div><div class="lab">电商黄金价格带</div></div>
-  </div>
-  <p>静电无尘(ESD/Cleanroom)行业是<strong>半导体、电子制造、医药、食品</strong>等领域的刚需配套产业。线上渗透率从12%升至20%，<strong>品牌化空间巨大</strong>（白牌占比30-45%）。核心策略：<strong>以耗材走量建立客户池 → 设备/仪器提升客单价 → 一站式洁净室方案</strong>。</p>
-</section>
 
-<section>
-  <h2 style="font-size:18px;margin-bottom:14px;">🗂️ 12大品类快速导航</h2>
-  
-  <h3 style="font-size:14px;color:var(--accent);margin:16px 0 10px;">🧑‍🔬 人体防护（3品类）</h3>
-  <div class="card-grid">
-    <a href="cleanroom-suit.html" class="card-link"><div class="card-emoji">👕</div><div class="card-title">无尘服/防静电服</div><div class="card-desc">人体防护第一大品类</div><div style="margin-top:6px"><span class="tag tag-hot" style="font-size:10px;">核心品类</span></div></a>
-    <a href="esd-gloves.html" class="card-link"><div class="card-emoji">🧤</div><div class="card-title">防静电手套</div><div class="card-desc">耗材第一高频复购</div><div style="margin-top:6px"><span class="tag tag-hot" style="font-size:10px;">高频复购</span></div></a>
-    <a href="esd-shoes.html" class="card-link"><div class="card-emoji">👟</div><div class="card-title">防静电鞋/无尘鞋</div><div class="card-desc">工厂标配刚需</div><div style="margin-top:6px"><span class="tag tag-hot" style="font-size:10px;">刚需品类</span></div></a>
+<!-- ====== TAB: 市场总览 ====== -->
+<div id="tab-overview" class="tab-panel active">
+  <div class="sec-title">行业概览</div>
+  <div class="summary-grid">
+    <div class="s-card"><div class="ico">⚡</div><div class="val">8</div><div class="lbl">ESD防护大类</div></div>
+    <div class="s-card" style="border-color:var(--accent)"><div class="ico">🧹</div><div class="val">60+</div><div class="lbl">细分SKU方向</div></div>
+    <div class="s-card" style="border-color:var(--accent2)"><div class="ico">📐</div><div class="val">15+</div><div class="lbl">每品核心参数</div></div>
+    <div class="s-card" style="border-color:#a855f7"><div class="ico">🏭</div><div class="val">75%+</div><div class="lbl">半导/电子/医疗</div></div>
+    <div class="s-card" style="border-color:var(--danger)"><div class="ico">📈</div><div class="val">18%</div><div class="lbl">年均复合增长</div></div>
+    <div class="s-card" style="border-color:#0ea5e9"><div class="ico">💰</div><div class="val">3:1+</div><div class="lbl">B端复购ROAS</div></div>
   </div>
 
-  <h3 style="font-size:14px;color:var(--accent3);margin:16px 0 10px;">🛠️ 耗材工具（6品类）</h3>
-  <div class="card-grid">
-    <a href="esd-mat.html" class="card-link"><div class="card-emoji">🟩</div><div class="card-title">防静电桌垫/地板</div><div class="card-desc">工作台标配</div><div style="margin-top:6px"><span class="tag tag-mid" style="font-size:10px;">工作台标配</span></div></a>
-    <a href="esd-wristband.html" class="card-link"><div class="card-emoji">⌚</div><div class="card-title">防静电手环</div><div class="card-desc">最低门槛ESD产品</div><div style="margin-top:6px"><span class="tag tag-hot" style="font-size:10px;">低客单走量</span></div></a>
-    <a href="cleanroom-wipes.html" class="card-link"><div class="card-emoji">🧻</div><div class="card-title">无尘布/无尘纸</div><div class="card-desc">耗材之王</div><div style="margin-top:6px"><span class="tag tag-hot" style="font-size:10px;">耗材之王</span></div></a>
-    <a href="cleanroom-consumables.html" class="card-link"><div class="card-emoji">😷</div><div class="card-title">洁净室耗材</div><div class="card-desc">口罩/帽子/鞋套</div><div style="margin-top:6px"><span class="tag tag-hot" style="font-size:10px;">刚需走量</span></div></a>
-    <a href="esd-bag.html" class="card-link"><div class="card-emoji">📦</div><div class="card-title">防静电包装袋</div><div class="card-desc">电子元器件包装刚需</div><div style="margin-top:6px"><span class="tag tag-mid" style="font-size:10px;">白牌蓝海</span></div></a>
-    <a href="esd-tools.html" class="card-link"><div class="card-emoji">🔧</div><div class="card-title">防静电工具</div><div class="card-desc">镊子/刷子/周转箱</div><div style="margin-top:6px"><span class="tag tag-mid" style="font-size:10px;">长尾品类</span></div></a>
+  <div class="sec-title">行业背景 & 核心驱动</div>
+  <div class="insight-grid">
+    <div class="insight-card blue">
+      <h4>🔌 下游需求爆发</h4>
+      <p>半导体、面板、消费电子、精密仪器快速扩产，对ESD防护 & 无尘环境需求持续升级，2025年高等级无尘室用品年增超25%。</p>
+    </div>
+    <div class="insight-card green">
+      <h4>🏥 医疗赛道加速</h4>
+      <p>IVD体外诊断、医疗器械生产洁净车间标准提升，无尘手套、无尘棉签、洁净室服装需求快速增长，消费端医美诊所同步拉动。</p>
+    </div>
+    <div class="insight-card orange">
+      <h4>🔧 汽修/DIY拉动</h4>
+      <p>新能源汽车维修、消费电子维修兴起，个人ESD工具（腕带、镊子、垫子）从纯B端向C端大众化普及，客单价低、复购高。</p>
+    </div>
+    <div class="insight-card red">
+      <h4>📦 参数为王趋势</h4>
+      <p>买家越来越专业，表面电阻值、ESD标准（ANSI/IEC）、材质级别成为选品决策依据，有参数标注的商品转化率高出30-50%。</p>
+    </div>
   </div>
 
-  <h3 style="font-size:14px;color:var(--accent5);margin:16px 0 10px;">🏭 环境控制 & 检测（3品类）</h3>
-  <div class="card-grid">
-    <a href="ion-fan.html" class="card-link"><div class="card-emoji">⚡</div><div class="card-title">离子风机/消除器</div><div class="card-desc">静电控制核心设备</div><div style="margin-top:6px"><span class="tag tag-mid" style="font-size:10px;">高客单价</span></div></a>
-    <a href="ffu-air-shower.html" class="card-link"><div class="card-emoji">🏗️</div><div class="card-title">FFU/风淋室</div><div class="card-desc">洁净室核心设备</div><div style="margin-top:6px"><span class="tag tag-mid" style="font-size:10px;">大客单价</span></div></a>
-    <a href="particle-counter.html" class="card-link"><div class="card-emoji">🔬</div><div class="card-title">粒子计数器/检测仪</div><div class="card-desc">洁净度检测仪器</div><div style="margin-top:6px"><span class="tag tag-low" style="font-size:10px;">专业仪器</span></div></a>
+  <div class="sec-title">8大核心类目速览</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;">
+    <div style="background:var(--card);border-radius:12px;padding:16px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:flex-start;">
+      <div style="font-size:26px;width:44px;height:44px;background:#dbeafe;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">🖐</div>
+      <div><div style="font-weight:700;font-size:14px;">人体防静电装备</div><div style="font-size:12px;color:var(--muted);margin-top:4px;">腕带、脚腕带、防静电鞋、手套、工作服、指套</div></div>
+    </div>
+    <div style="background:var(--card);border-radius:12px;padding:16px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:flex-start;">
+      <div style="font-size:26px;width:44px;height:44px;background:#d1fae5;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">🌬</div>
+      <div><div style="font-weight:700;font-size:14px;">静电消除设备</div><div style="font-size:12px;color:var(--muted);margin-top:4px;">离子风机、离子风棒、离子风枪、高压静电枪</div></div>
+    </div>
+    <div style="background:var(--card);border-radius:12px;padding:16px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:flex-start;">
+      <div style="font-size:26px;width:44px;height:44px;background:#ede9fe;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">🛠</div>
+      <div><div style="font-weight:700;font-size:14px;">防静电工具器具</div><div style="font-size:12px;color:var(--muted);margin-top:4px;">台垫·镊子·元件盒·工作台</div></div>
+    </div>
+    <div style="background:var(--card);border-radius:12px;padding:16px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:flex-start;">
+      <div style="font-size:26px;width:44px;height:44px;background:#ffedd5;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">📦</div>
+      <div><div style="font-weight:700;font-size:14px;">防静电包装材料</div><div style="font-size:12px;color:var(--muted);margin-top:4px;">屏蔽袋、PE袋、气泡袋、泡棉、周转箱</div></div>
+    </div>
+    <div style="background:var(--card);border-radius:12px;padding:16px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:flex-start;">
+      <div style="font-size:26px;width:44px;height:44px;background:#fce7f3;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">🏢</div>
+      <div><div style="font-weight:700;font-size:14px;">防静电地坪材料</div><div style="font-size:12px;color:var(--muted);margin-top:4px;">防静电地板/地垫/导静电涂料</div></div>
+    </div>
+    <div style="background:var(--card);border-radius:12px;padding:16px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:flex-start;">
+      <div style="font-size:26px;width:44px;height:44px;background:#cffafe;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">🧪</div>
+      <div><div style="font-weight:700;font-size:14px;">防静电检测仪器</div><div style="font-size:12px;color:var(--muted);margin-top:4px;">静电测试仪、电阻测试仪、腕带测试仪</div></div>
+    </div>
+    <div style="background:var(--card);border-radius:12px;padding:16px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:flex-start;">
+      <div style="font-size:26px;width:44px;height:44px;background:#dcfce7;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">🥼</div>
+      <div><div style="font-weight:700;font-size:14px;">无尘洁净防护服</div><div style="font-size:12px;color:var(--muted);margin-top:4px;">无尘服、无尘帽、鞋套、口罩、护目镜</div></div>
+    </div>
+    <div style="background:var(--card);border-radius:12px;padding:16px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:flex-start;">
+      <div style="font-size:26px;width:44px;height:44px;background:#f0fdf4;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">🧹</div>
+      <div><div style="font-weight:700;font-size:14px;">洁净室耗材</div><div style="font-size:12px;color:var(--muted);margin-top:4px;">无尘擦拭布、无尘棉签、无尘纸、粘尘滚</div></div>
+    </div>
   </div>
-</section>
-
-<section style="margin-top:32px;">
-  <h2 style="font-size:18px;margin-bottom:14px;">⭐ 优先级推荐 & 拓展路线图</h2>
-  <div class="priority-grid">
-    <div class="pcard"><h4>🥇 P0：耗材三大件（立即启动）</h4><p>无尘布 + 防静电手套 + 洁净室耗材(口罩/帽/鞋套)。高频复购、低门槛、白牌多。月搜总量50万+，GMV 15-25亿/年。</p></div>
-    <div class="pcard"><h4>🥇 P0：人体防护套装</h4><p>无尘服 + 防静电鞋组合套装 ¥100-300。与耗材形成'洁净室入门包'，客单价翻3倍。月搜30万+。</p></div>
-    <div class="pcard p2"><h4>🥈 P1：ESD工位方案（3个月后）</h4><p>桌垫 + 手环 + 镊子 + 离子风机 组合销售。从卖产品到卖'防静电工位整体方案'，客单价¥500-1500。</p></div>
-    <div class="pcard p2"><h4>🥈 P1：防静电包装袋</h4><p>白牌占比35%的蓝海。多尺寸矩阵+可定制印刷，锁定电子元器件厂复购。¥10-50/100个走量。</p></div>
-    <div class="pcard p2"><h4>🥉 P2：检测仪器（6个月后）</h4><p>表面电阻测试仪+静电场测试仪 ¥300-1500，配校准服务。粒子计数器中远期。</p></div>
-    <div class="pcard p2"><h4>🥉 P2：模块化洁净棚</h4><p>¥3000-8000，面向初创电子厂/实验室。FFU/风淋室线上询价引流。</p></div>
-  </div>
-</section>
-
-<section style="margin-top:32px;">
-  <h2 style="font-size:18px;margin-bottom:14px;">📋 全品类速览表</h2>
-  <table style="font-size:11px;">
-  <thead><tr><th>品类</th><th>核心价格带</th><th>月搜索热度</th><th>线上GMV估算</th><th>白牌占比</th><th>推荐优先级</th></tr></thead>
-  <tbody>
-  <tr><td>👕 无尘服/防静电服</td><td class="price-range">¥50-300</td><td>30万+</td><td>8-12亿</td><td>25%</td><td><span class="badge badge-green">P0</span></td></tr>
-  <tr><td>🧤 防静电手套</td><td class="price-range">¥15-60/盒</td><td>30万+</td><td>5-8亿</td><td>35%</td><td><span class="badge badge-green">P0</span></td></tr>
-  <tr><td>👟 防静电鞋</td><td class="price-range">¥30-100</td><td>15万+</td><td>3-5亿</td><td>30%</td><td><span class="badge badge-green">P0</span></td></tr>
-  <tr><td>🧻 无尘布/无尘纸</td><td class="price-range">¥15-50/包</td><td>25万+</td><td>4-7亿</td><td>30%</td><td><span class="badge badge-green">P0</span></td></tr>
-  <tr><td>😷 洁净室耗材</td><td class="price-range">¥10-50/盒</td><td>25万+</td><td>3-5亿</td><td>40%</td><td><span class="badge badge-green">P0</span></td></tr>
-  <tr><td>⌚ 防静电手环</td><td class="price-range">¥5-30</td><td>20万+</td><td>0.5-1亿</td><td>45%</td><td><span class="badge badge-yellow">P1</span></td></tr>
-  <tr><td>🟩 防静电桌垫</td><td class="price-range">¥50-150/㎡</td><td>5万+</td><td>1-2亿</td><td>25%</td><td><span class="badge badge-yellow">P1</span></td></tr>
-  <tr><td>📦 防静电包装袋</td><td class="price-range">¥10-50/100个</td><td>15万+</td><td>1-2亿</td><td>35%</td><td><span class="badge badge-yellow">P1</span></td></tr>
-  <tr><td>🔧 防静电工具</td><td class="price-range">¥10-50</td><td>10万+</td><td>1-2亿</td><td>45%</td><td><span class="badge badge-yellow">P1</span></td></tr>
-  <tr><td>⚡ 离子风机</td><td class="price-range">¥200-1000</td><td>2万+</td><td>1-2亿</td><td>20%</td><td><span class="badge badge-yellow">P2</span></td></tr>
-  <tr><td>🏗️ FFU/风淋室</td><td class="price-range">¥1000-3000</td><td>1万+</td><td>2-4亿</td><td>15%</td><td><span class="badge badge-yellow">P2</span></td></tr>
-  <tr><td>🔬 粒子计数器</td><td class="price-range">¥2000-8000</td><td>1万+</td><td>1-3亿</td><td>10%</td><td><span class="badge badge-yellow">P2</span></td></tr>
-  </tbody></table>
-  <p style="font-size:10px;color:var(--text-tertiary);margin-top:8px;">※ 搜索热度和GMV为多维度估算，非平台官方数据</p>
-</section>
-
 </div>
+
+<!-- ====== TAB: 品类参数详解 ====== -->
+<div id="tab-params" class="tab-panel">
+  <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:10px;padding:14px 18px;margin-bottom:24px;font-size:13px;color:#1e40af;">
+    💡 <strong>使用说明：</strong>点击大类标题展开，再点击每个细分品类卡片右侧「展开参数」查看核心技术规格、认证标准、选品关键点等详细信息。
+  </div>
+
+  <!-- ========== CAT 1: 人体防静电装备 ========== -->
+  <div class="cat-section">
+    <div class="cat-section-head" onclick="toggleCat(this)" style="border-color:#3b82f6;">
+      <div class="cat-icon-big" style="background:#dbeafe;">🖐</div>
+      <div class="cat-section-info">
+        <div class="cat-section-name">① 人体防静电装备</div>
+        <div class="cat-section-sub">ESD穿戴全套 · C+B双端最高频电商品类 · 8个细分</div>
+        <div class="cat-section-badges">
+          <span class="badge badge-green">★★★★★ 需求量</span>
+          <span class="badge badge-blue">C+B双端</span>
+          <span class="badge badge-orange">高复购</span>
+          <span class="badge badge-purple">P1首选</span>
+        </div>
+      </div>
+      <div class="cat-section-arrow">▾</div>
+    </div>
+    <div class="cat-section-body">
+      <div class="sku-grid">
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">有绳防静电腕带</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-h">极热</span>
+              <span class="sku-price">¥5–25</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>电阻规格</td><td><span class="param-highlight">1MΩ±20%</span> 腕带本体电阻；接地线电阻 <span class="param-highlight">1MΩ</span>（保护电阻）</td></tr>
+              <tr><td>线长规格</td><td>标准 <span class="param-highlight">1.8m / 3m / 5m</span>，可定制螺旋伸缩线（1.5→4m）</td></tr>
+              <tr><td>腕带材质</td><td>导电纤维 + 防静电碳素纤维编织；内衬TPU或PU皮革</td></tr>
+              <tr><td>接头类型</td><td>鳄鱼夹、香蕉插头、4mm插孔，客户需按接地插头类型匹配</td></tr>
+              <tr><td>测试标准</td><td><span class="param-highlight">ANSI/ESD S1.1</span>、IEC 61340-5-1、GB/T 26157</td></tr>
+              <tr><td>宽度规格</td><td>18mm / 22mm / 25mm；儿童款12mm（学生电子DIY）</td></tr>
+              <tr><td>适用场景</td><td>SMT贴片、IC焊接、手机维修、PCB调试、半导体生产线</td></tr>
+              <tr><td>差异化要点</td><td><span class="param-warn">带LED指示灯款</span>（接地检测）溢价50%+；可调节扣设计 vs 固定扣；颜色（黑/蓝/灰）</td></tr>
+              <tr><td>电商关键词</td><td>防静电手环、ESD腕带、接地手腕带、防静电腕带有绳款</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">无绳防静电腕带（无线款）</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-h">热</span>
+              <span class="sku-price">¥30–120</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>工作原理</td><td>主动式静电中和（内置离子化模块）或 电容感应式，无需接地线</td></tr>
+              <tr><td>电源方式</td><td>CR2032纽扣电池（6个月+），或 USB-C充电款（主流升级方向）</td></tr>
+              <tr><td>消电效率</td><td>≤ <span class="param-highlight">100V以内</span> 为优质品；≤50V为高端款</td></tr>
+              <tr><td>测试标准</td><td>ANSI/ESD STM97.2（无绳腕带测试规范）</td></tr>
+              <tr><td>适用场景</td><td>行动作业台、维修流水线（有线不方便时）、移动操作工位</td></tr>
+              <tr><td>差异化要点</td><td><span class="param-highlight">带数显电量/静电值</span>的智能款溢价高；品牌认证是信任基础</td></tr>
+              <tr><td>注意事项</td><td><span class="param-warn">部分无线款防护等级低于有绳款</span>，需明确标注适用ESD级别</td></tr>
+              <tr><td>选品建议</td><td>中高端定位，主推USB充电款 + LED状态指示</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">防静电手套（PU指/全掌）</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-h">极热</span>
+              <span class="sku-price">¥15–60/双</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>手套类型</td><td><span class="param-highlight">PU指尖涂层</span>（SMT主流）、PU全掌、碳纤维编织、无尘尼龙款</td></tr>
+              <tr><td>表面电阻</td><td>PU涂层款：<span class="param-highlight">10⁶–10⁸Ω</span>；碳纤维款：10⁴–10⁶Ω</td></tr>
+              <tr><td>颗粒密度</span></td><td>指尖涂层颗粒数：150D/175D/200D，数值越高越耐磨</td></tr>
+              <tr><td>尺码规格</td><td>S/M/L/XL，部分有XS（精细操作）和XXL（特殊需求）</td></tr>
+              <tr><td>洁净等级</td><td>普通级 / ISO Class 5 / ISO Class 3，洁净度越高价格越高</td></tr>
+              <tr><td>测试标准</td><td>IEC 61340-5-1；EN 1149-1（静电性能）；ASTM F1671（防病毒可选）</td></tr>
+              <tr><td>适用场景</td><td>SMT贴片（PU指）、晶圆搬运（全掌无尘）、光学镜头组装、医疗器械</td></tr>
+              <tr><td>差异化要点</td><td>触屏兼容款（手机厂商偏好）；食品级材质；颜色定制（蓝/白/黑）</td></tr>
+              <tr><td>选品建议</td><td>走量款：PU指尖M/L码黑色；溢价款：ISO Class 5无尘 + 触屏款</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">防静电指套</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-h">热</span>
+              <span class="sku-price">¥3–20/袋</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>材质分类</td><td><span class="param-highlight">橡胶/乳胶指套</span>（低端走量）、丁腈橡胶（无粉）、导电碳素（高端）</td></tr>
+              <tr><td>表面电阻</td><td>乳胶款：10⁷–10⁹Ω；导电碳素款：10⁴–10⁶Ω</td></tr>
+              <tr><td>尺码规格</td><td>XS/S/M/L/XL；按手指型号（食指/中指通用）</td></tr>
+              <tr><td>包装规格</td><td>100只/袋、500只/袋、1000只/桶，按需选择</td></tr>
+              <tr><td>有粉/无粉</td><td><span class="param-warn">医疗/光学场景要求无粉款</span>，普通电子厂用有粉款降本</td></tr>
+              <tr><td>适用场景</td><td>IC分选、镜片触碰、键盘组装、手机维修、LCD贴合</td></tr>
+              <tr><td>差异化要点</td><td>防过敏TPE款（无乳胶过敏）；带防滑纹款；颜色区分（蓝/白/黑）</td></tr>
+              <tr><td>选品建议</td><td>按需选材：量大选乳胶有粉，敏感场景选丁腈无粉</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">防静电工作鞋/鞋套</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-m">中</span>
+              <span class="sku-price">¥50–300</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>鞋底电阻</td><td>防静电鞋：<span class="param-highlight">10⁵–10⁸Ω</span>（与导电鞋区分）；导电鞋：&lt;10⁵Ω</td></tr>
+              <tr><td>鞋面材质</td><td>PU革、网布透气款、皮革款（防化学品），需标注材质成分</td></tr>
+              <tr><td>认证标准</td><td><span class="param-highlight">GB 4385</span>防静电鞋国标；EN ISO 20345（欧标）；ASTM F2413（美标）</td></tr>
+              <tr><td>防护等级</td><td>基础防静电、防静电+防砸（安全帽头）、防静电+防穿刺</td></tr>
+              <tr><td>适用场景</td><td>半导体洁净室、爆炸性气体环境（特殊认证）、普通电子厂</td></tr>
+              <tr><td>尺码范围</td><td>35–46码，部分大码需单独备货</td></tr>
+              <tr><td>差异化要点</td><td>轻便透气款（夏季需求大）；女款（35-39码高增长）；可拆鞋垫</td></tr>
+              <tr><td>选品建议</td><td><span class="param-warn">注意区分「防静电鞋」和「导电鞋」</span>，应用场景不同，不能混用</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">防静电连体服/分体服</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-m">中</span>
+              <span class="sku-price">¥80–400</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>面料类型</td><td>聚酯+导电纤维（碳纤维/银纤维）；TC布（65%聚酯+35%棉）</td></tr>
+              <tr><td>导电纤维间距</td><td><span class="param-highlight">5mm格子</span>（高防护）/ 10mm格子（普通级）/ 网格导电条</td></tr>
+              <tr><td>表面电阻</td><td>10⁵–10⁸Ω（符合ESD S1.1/IEC 61340-5-1标准）</td></tr>
+              <tr><td>洁净等级</td><td>不适用洁净室（普通ESD）/ ISO Class 6-8 / ISO Class 4-5（高等级）</td></tr>
+              <tr><td>拉链类型</td><td>普通金属拉链 vs <span class="param-highlight">防静电拉链</span>（导电型）；里外口袋数量</td></tr>
+              <tr><td>认证标准</td><td>GB 12011（防静电服）；EN 1149-5（欧标）</td></tr>
+              <tr><td>尺码范围</td><td>XS–XXXXL，大码占比高（B端工厂员工多样体型）</td></tr>
+              <tr><td>差异化要点</td><td>可洗涤次数（≥50次洗涤后仍满足电阻要求）；颜色定制（企业统一）</td></tr>
+              <tr><td>选品建议</td><td>主推TC布5mm格子款 + 导电拉链组合；中高端加ISO认证标签</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">防静电脚腕带</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-m">中</span>
+              <span class="sku-price">¥8–35</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>适用场景</td><td>站立操作工位（站式操作台代替腕带接地）；配合防静电鞋使用</td></tr>
+              <tr><td>电阻规格</td><td>腿部金属扣至导线：<span class="param-highlight">1MΩ</span> 保护电阻（防触电）</td></tr>
+              <tr><td>材质</td><td>弹力导电布带 + 不锈钢扣；接头同腕带一致</td></tr>
+              <tr><td>测试标准</td><td>ANSI/ESD S13.1（脚腕带测试规范）</td></tr>
+              <tr><td>搭配使用</td><td>需与防静电地板（≤10⁹Ω）或接地脚踏垫配合使用效果最佳</td></tr>
+              <tr><td>差异化要点</td><td>可调节弹力尺寸（一码通用）；绑带舒适度（长时间站立场景）</td></tr>
+              <tr><td>选品建议</td><td>常与腕带打包销售，可做腕带+脚腕带套装提升客单价</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">防静电围裙/袖套</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-l">一般</span>
+              <span class="sku-price">¥30–150</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>面料规格</td><td>PVC防静电涂层 / 导电纤维织物；耐化学品腐蚀版本</td></tr>
+              <tr><td>围裙尺寸</td><td>标准款：60×90cm；长款：60×120cm；加宽款：70cm</td></tr>
+              <tr><td>袖套规格</td><td>长度：38cm/45cm/55cm；口径：18-20cm可调弹力口</td></tr>
+              <tr><td>适用场景</td><td>电子装配（防碎屑/防油污 + 防静电）；实验室操作；电池组装</td></tr>
+              <tr><td>差异化要点</td><td>袖套+围裙套装组合；PVC涂层耐酸碱款（溢价）</td></tr>
+              <tr><td>选品建议</td><td>主要作为搭配品，可与工作服组成套装提升关联购买</td></tr>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== CAT 2: 静电消除设备 ========== -->
+  <div class="cat-section">
+    <div class="cat-section-head" onclick="toggleCat(this)" style="border-color:#10b981;">
+      <div class="cat-icon-big" style="background:#d1fae5;">🌬</div>
+      <div class="cat-section-info">
+        <div class="cat-section-name">② 静电消除设备</div>
+        <div class="cat-section-sub">离子风机/风棒/风枪 · 高客单 · B端核心 · 7个细分</div>
+        <div class="cat-section-badges">
+          <span class="badge badge-green">★★★★ 毛利高</span>
+          <span class="badge badge-blue">工厂B端</span>
+          <span class="badge badge-purple">单价高</span>
+          <span class="badge badge-blue">P2重点</span>
+        </div>
+      </div>
+      <div class="cat-section-arrow">▾</div>
+    </div>
+    <div class="cat-section-body">
+      <div class="sku-grid">
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">台式离子风机（小型）</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-h">热</span>
+              <span class="sku-price">¥200–800</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>离子化技术</td><td><span class="param-highlight">AC（交流）</span>型 vs <span class="param-highlight">DC（直流）</span>型；DC型平衡性更好、噪音更低</td></tr>
+              <tr><td>离子平衡度</td><td>±5V以内为高端；±15V为中档；±30V为入门级</td></tr>
+              <tr><td>消除时间</td><td>1000V消除至100V以内的时间：0.5s/1.5s/3s（距离30cm）</td></tr>
+              <tr><td>覆盖范围</td><td>有效范围：<span class="param-highlight">30×30cm（30cm高）</span>至 60×60cm（根据风扇型号）</td></tr>
+              <tr><td>风速调节</td><td>1档/2档/3档调速；部分带无级调速旋钮</td></tr>
+              <tr><td>噪音等级</td><td>&lt;45dB（DC型静音）；45–55dB（AC型）</td></tr>
+              <tr><td>供电规格</td><td>AC 220V/50Hz；部分支持 110V（出口版）</td></tr>
+              <tr><td>清洁周期</td><td>离子针需定期清洁（1个月/3个月）；针型：单针/多针</td></tr>
+              <tr><td>认证标准</td><td>ANSI/ESD SP12.1；CE/RoHS；GB 4706</td></tr>
+              <tr><td>差异化要点</td><td><span class="param-highlight">带自动清洁功能</span>；带计时器；带离子平衡监测显示</td></tr>
+              <tr><td>选品建议</td><td>主推DC型±10V以内；附赠离子针清洁刷可提升好评率</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">悬挂式离子风机</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-m">中</span>
+              <span class="sku-price">¥500–2000</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>安装方式</td><td>顶部悬挂（天花板/支架）；适合大面积操作台覆盖</td></tr>
+              <tr><td>覆盖面积</td><td>悬挂高度 50cm：覆盖 80×80cm；高度1m：覆盖 120×120cm</td></tr>
+              <tr><td>离子化类型</td><td>AC型（成本低）/ DC型（精度高）；部分有 Pulsed DC（脉冲直流）</td></tr>
+              <tr><td>风量参数</td><td>风量：50–200 CFM；可调风速对应不同工位要求</td></tr>
+              <tr><td>适用场景</td><td>SMT流水线上方、PCB组装工位、大面积操作工作台</td></tr>
+              <tr><td>差异化要点</td><td>自动平衡补偿功能（减少因离子针老化引起的不平衡）</td></tr>
+              <tr><td>选品建议</td><td>B端采购为主，需提供样品测试报告（离子平衡度数据）</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">离子风棒（Bar型）</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-m">中</span>
+              <span class="sku-price">¥150–600</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>长度规格</td><td><span class="param-highlight">200mm / 300mm / 500mm / 1000mm</span>；按流水线宽度选型</td></tr>
+              <tr><td>工作方式</td><td>配合外部风源（气枪/风刀）使用；不自带风扇</td></tr>
+              <tr><td>离子针间距</td><td>30mm / 50mm / 100mm；间距越小覆盖越均匀</td></tr>
+              <tr><td>供电方式</td><td>高压发生器供电（5kV±1kV AC）；含分体式控制器</td></tr>
+              <tr><td>适用场景</td><td>薄膜/铝箔生产线除静电；流水线传送带；吹塑灌装流水线</td></tr>
+              <tr><td>差异化要点</td><td>短路保护设计；IP54防护等级（防水防尘）；不锈钢针（耐腐蚀）</td></tr>
+              <tr><td>注意事项</td><td><span class="param-warn">需搭配高压发生器一起销售，否则客户无法使用</span></td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">离子风枪（手持式）</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-h">热</span>
+              <span class="sku-price">¥80–400</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>气源方式</td><td><span class="param-highlight">外接气泵（4–6 bar压缩空气）</span>/ 内置风扇款（免气源，入门级）</td></tr>
+              <tr><td>离子平衡度</td><td>外接气源款：±10V（高端）；内置风扇款：±30V（入门）</td></tr>
+              <tr><td>风枪接头</td><td>1/4" 快速插头（国标）；1/8" NPT（美标）；需标注接头规格</td></tr>
+              <tr><td>适用场景</td><td>手持精密除静电：SMD散件、镜头清洁、IC包装开箱</td></tr>
+              <tr><td>差异化要点</td><td>枪身材质（防静电ABS）；带消音器（减噪）；弯头/直头选型</td></tr>
+              <tr><td>选品建议</td><td>入门款主推内置风扇款（免气源），专业款主推外接气枪高精度款</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">高压静电消除器</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-l">一般</span>
+              <span class="sku-price">¥300–3000</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>工作原理</td><td>科罗纳放电（高压针尖电离空气产生正负离子）</td></tr>
+              <tr><td>输出电压</td><td>AC高压：±5kV至±10kV；频率50Hz或脉冲可调</td></tr>
+              <tr><td>防护等级</td><td>IP20（普通室内）至 IP54（防尘防水工业级）</td></tr>
+              <tr><td>安全认证</td><td><span class="param-highlight">CE / UL认证</span>（出口必备）；GB 4706（国内）</td></tr>
+              <tr><td>适用场景</td><td>塑料薄膜、纸张、纺织品生产线；印刷包装；液晶贴合</td></tr>
+              <tr><td>差异化要点</td><td>可调频率（优化针对不同材料）；故障自诊断功能</td></tr>
+              <tr><td>注意事项</td><td><span class="param-warn">高压设备需附安全操作手册，否则平台可能下架</span></td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">离子喷嘴/离子风嘴</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-l">一般</span>
+              <span class="sku-price">¥100–500</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>安装方式</td><td>固定式吹嘴（安装在流水线固定位置）</td></tr>
+              <tr><td>气压范围</td><td>1–6 bar；适配标准压缩空气系统</td></tr>
+              <tr><td>喷射角度</td><td>15°/30°/45°/90°可选角度安装；直头与弯头</td></tr>
+              <tr><td>适用场景</td><td>自动化流水线固定点除静电；PCB传送带节点；包装盒成型</td></tr>
+              <tr><td>选品建议</td><td>常与离子风棒/高压发生器搭配成套方案出售，提升客单价</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">静电电位测试仪（配套）</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-m">中</span>
+              <span class="sku-price">¥500–5000</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>测量范围</td><td>±200V 至 ±20kV；分辨率 1V</td></tr>
+              <tr><td>响应时间</td><td>&lt;0.1s（动态检测）；静态稳定读数模式</td></tr>
+              <tr><td>测量距离</td><td>非接触式：10mm/25mm/100mm测量距离（影响读数准确性）</td></tr>
+              <tr><td>适用场景</td><td>验证离子风机消除效果；生产线ESD巡检；入库抽检</td></tr>
+              <tr><td>认证</td><td>ANSI/ESD STM3.1；CE认证</td></tr>
+              <tr><td>差异化要点</td><td>带数据记录导出功能（USB/蓝牙）；手持式 vs 台式</td></tr>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== CAT 3: 防静电工具器具 ========== -->
+  <div class="cat-section">
+    <div class="cat-section-head" onclick="toggleCat(this)" style="border-color:#8b5cf6;">
+      <div class="cat-icon-big" style="background:#ede9fe;">🛠</div>
+      <div class="cat-section-info">
+        <div class="cat-section-name">③ 防静电工具器具</div>
+        <div class="cat-section-sub">台垫·镊子·元件盒·工具台 · C+B双端销量最大 · 9个细分</div>
+        <div class="cat-section-badges">
+          <span class="badge badge-green">★★★★★ 销量大</span>
+          <span class="badge badge-blue">C+B双端</span>
+          <span class="badge badge-orange">易选品</span>
+          <span class="badge badge-purple">P1首选</span>
+        </div>
+      </div>
+      <div class="cat-section-arrow">▾</div>
+    </div>
+    <div class="cat-section-body">
+      <div class="sku-grid">
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">防静电台垫/工作台垫</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-h">极热</span>
+              <span class="sku-price">¥20–200</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>层结构</td><td>双层：<span class="param-highlight">上层导电层（10⁶Ω）+ 下层绝缘层（10⁹Ω以上）</span>；三层（夹心泡棉增强缓冲）</td></tr>
+              <tr><td>表面电阻</td><td>上层：10⁶–10⁸Ω（导静电层）；≤10⁶Ω为导电垫</td></tr>
+              <tr><td>常用尺寸</td><td>600×900mm / 900×1500mm / 1200×1800mm；厚度 2mm/3mm/5mm</td></tr>
+              <tr><td>颜色规格</td><td>绿色（最常见）、蓝色、灰色、黑色；可定制尺寸颜色</td></tr>
+              <tr><td>配件</td><td>通常配 <span class="param-highlight">接地线（4mm香蕉插+1MΩ）+ 腕带插孔</span>；是否附配件影响售价</td></tr>
+              <tr><td>耐温范围</td><td>-20°C 至 +80°C；部分高温款至 +120°C（电烙铁垫款）</td></tr>
+              <tr><td>测试标准</td><td>ANSI/ESD S4.1；IEC 61340-4-1；GB/T 26572</td></tr>
+              <tr><td>差异化要点</td><td>耐烙铁高温款；双面使用款；带网格标尺款（精密装配用）</td></tr>
+              <tr><td>选品建议</td><td>走量款：绿色900×1500mm 双层3mm；溢价款：带标尺+高温+配件套装</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">防静电镊子（套装）</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-h">热</span>
+              <span class="sku-price">¥15–80</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>材质分类</td><td>碳纤维（最常见）、导电ABS + 不锈钢尖、纯钛（高端）</td></tr>
+              <tr><td>表面电阻</td><td>碳纤维款：<span class="param-highlight">10⁴–10⁶Ω</span>；导电ABS：10⁶–10⁸Ω</td></tr>
+              <tr><td>型号规格</td><td>常见型号：AA（直尖）/SA（弯尖）/BA（宽头）/H7（平头）/0A（超细）</td></tr>
+              <tr><td>套装配置</td><td>3件套（直/弯/宽）/ 5件套 / 8件套；套装溢价明显</td></tr>
+              <tr><td>尖端精度</td><td>尖端宽度：0.1mm/0.2mm/0.5mm；精密款 0.05mm（光学/芯片）</td></tr>
+              <tr><td>力度标注</td><td>低弹力（适合夹持细小元件）/ 高弹力（夹持大件）</td></tr>
+              <tr><td>适用场景</td><td>SMT贴片、IC焊接、手表维修、精密仪器组装</td></tr>
+              <tr><td>差异化要点</td><td>带防滑纹波纹手柄；配套收纳盒的套装；品牌标刻蚀（防仿）</td></tr>
+              <tr><td>选品建议</td><td>主推碳纤维5件套（直+弯+宽+细+平）附收纳袋</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">防静电周转箱/元件盒</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-h">热</span>
+              <span class="sku-price">¥10–60</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>材质</td><td>导电PP（黑色）/ 防静电PS（深绿）/ 防静电ABS；表面电阻 10⁵–10⁸Ω</td></tr>
+              <tr><td>常见尺寸</td><td>400×300mm（4号）/ 600×400mm（6号）/ 200×150mm（2号小盒）</td></tr>
+              <tr><td>分格方式</td><td>固定分格（5格/9格/12格）/ 活动隔板（可调）/ 无分格（通用）</td></tr>
+              <tr><td>可叠放</td><td>带叠放结构：空间利用率高（工厂仓储必备）；带轮子款（重型）</td></tr>
+              <tr><td>盖子类型</td><td>无盖（开放式）/ 翻盖 / 插盖 / 卡扣盖；防尘需求影响选型</td></tr>
+              <tr><td>适用场景</td><td>SMD元件周转、IC管存储、晶圆载具周转</td></tr>
+              <tr><td>差异化要点</td><td>透明可视款（快速盘点）；彩色分类款（颜色管理）；异形定制款</td></tr>
+              <tr><td>选品建议</td><td>主打可叠放+活动隔板+黑色导电PP款；加盖款溢价明显</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">防静电刷子（主板清洁）</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-m">中</span>
+              <span class="sku-price">¥8–40</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>刷柄材质</td><td>导电ABS / 导电PP；颜色通常为黑色或深蓝色</td></tr>
+              <tr><td>刷毛材质</td><td>导电尼龙（最常见）/ 导电猪鬃 / 防静电天然毛；毛长15mm/25mm</td></tr>
+              <tr><td>表面电阻</td><td>刷柄：10⁵–10⁸Ω；刷毛：10⁴–10⁶Ω</td></tr>
+              <tr><td>形状规格</td><td>平头（宽清扫）/ 圆头（深孔清洁）/ 扇形（散热片）/ 锥形（缝隙）</td></tr>
+              <tr><td>尺寸规格</td><td>刷头宽：15mm / 25mm / 40mm；刷柄长：180mm / 240mm</td></tr>
+              <tr><td>适用场景</td><td>PCB/主板灰尘清洁、键盘缝隙、服务器散热风扇、精密仪器清洁</td></tr>
+              <tr><td>差异化要点</td><td>套装（不同刷头组合）；带防静电手柄挂绳</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">防静电料盘/SMD托盘</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-m">中</span>
+              <span class="sku-price">¥5–30</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>材质</td><td>导电PS / 碳黑填充聚丙烯；表面电阻 10⁵–10⁷Ω</td></tr>
+              <tr><td>规格型号</td><td>JEDEC托盘：通用型号按IC封装对应；定制型号按客户需求</td></tr>
+              <tr><td>主要尺寸</td><td>200×100mm（标准SMD盘）/ 250×150mm / 300×200mm</td></tr>
+              <tr><td>承重</td><td>单盘：200–500g；叠放强度：20层不变形</td></tr>
+              <tr><td>配套包装</td><td>带封口袋（防氧化）/ 带顶盖（防尘）/ 配海绵内衬（精密IC）</td></tr>
+              <tr><td>差异化要点</td><td>定制宫格数量和尺寸（针对特定IC型号）；带颜色标识</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">防静电工具箱/工具包</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-m">中</span>
+              <span class="sku-price">¥30–300</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>外壳材质</td><td>防静电ABS / 导电PP；表面电阻 10⁶–10⁸Ω</td></tr>
+              <tr><td>规格系列</td><td>手提式（350×250mm）/ 翻盖式 / 滚轮大箱（工具车）</td></tr>
+              <tr><td>内衬材质</td><td>防静电EVA泡棉 / 导电海绵；防止内部晃动碰撞</td></tr>
+              <tr><td>隔板设计</td><td>固定分区 vs 活动分区；是否配工具托盘</td></tr>
+              <tr><td>适用场景</td><td>现场维修出差（防静电工具便携）；产线工具管理台账</td></tr>
+              <tr><td>差异化要点</td><td>带密码锁（贵重工具防盗）；帆布包款（轻便便携）；含工具套装</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">防静电剪刀</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-l">一般</span>
+              <span class="sku-price">¥20–80</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>材质</td><td>不锈钢刀刃 + 导电ABS手柄；或全碳纤维型（高端）</td></tr>
+              <tr><td>手柄电阻</td><td>10⁶–10⁸Ω（手柄）；刀刃为导电金属</td></tr>
+              <tr><td>刀刃规格</td><td>直刃 / 弯刃；刀刃长度 50mm/70mm/90mm</td></tr>
+              <tr><td>适用场景</td><td>剪切防静电袋、IC编带、导线；不锈钢刃防腐蚀</td></tr>
+              <tr><td>差异化要点</td><td>弹簧自动回弹款（减少手部疲劳，长期作业选择）</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">防静电工作台架</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-l">一般</span>
+              <span class="sku-price">¥300–2000</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>结构材质</td><td>钢架喷塑（主流）/ 铝合金架；台面为防静电板或贴台垫</td></tr>
+              <tr><td>台面尺寸</td><td>常见：1200×600mm / 1500×750mm / 2400×750mm（双人台）</td></tr>
+              <tr><td>接地设计</td><td>台架接地孔 + 接地线（4mm铜线至地网）；台垫接地插孔</td></tr>
+              <tr><td>附加功能</td><td>可调高度（手摇/电动升降）；带灯槽（LED照明）；带挂板（工具挂架）</td></tr>
+              <tr><td>适用场景</td><td>电子厂工位、返修工作站、实验室操作台</td></tr>
+              <tr><td>差异化要点</td><td>可定制颜色；符合人体工学可调高度；含接地测试报告</td></tr>
+              <tr><td>注意事项</td><td><span class="param-warn">B端采购为主，需提供整台接地测试报告及批量定制能力</span></td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">导静电接地插座/接地线</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-m">中</span>
+              <span class="sku-price">¥20–120</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>接地线规格</td><td>铜芯截面：1.5mm² / 2.5mm²；外皮颜色：绿黄色（国际接地标准色）</td></tr>
+              <tr><td>保护电阻</td><td>内含 <span class="param-highlight">1MΩ 保护电阻</span>（防止直接接地触电）</td></tr>
+              <tr><td>接头类型</td><td>香蕉插头（4mm）/ 鳄鱼夹 / 环形压线端子 / 法式快拔插</td></tr>
+              <tr><td>线长规格</td><td>1.8m / 3m / 5m / 10m；颜色：黑色/蓝色/绿色</td></tr>
+              <tr><td>适用场景</td><td>连接台垫、腕带、工作台到接地插座/地网</td></tr>
+              <tr><td>差异化要点</td><td>多点分接（一拖三/一拖五）延长线；带指示灯接地验证功能</td></tr>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== CAT 4: 防静电包装材料 ========== -->
+  <div class="cat-section">
+    <div class="cat-section-head" onclick="toggleCat(this)" style="border-color:#f97316;">
+      <div class="cat-icon-big" style="background:#ffedd5;">📦</div>
+      <div class="cat-section-info">
+        <div class="cat-section-name">④ 防静电包装材料</div>
+        <div class="cat-section-sub">屏蔽袋·PE袋·气泡袋·泡棉·周转箱 · 量最大竞争最激烈 · 8个细分</div>
+        <div class="cat-section-badges">
+          <span class="badge badge-green">★★★★★ 量最大</span>
+          <span class="badge badge-blue">高频采购</span>
+          <span class="badge badge-red">竞争激烈</span>
+          <span class="badge badge-orange">P3视情</span>
+        </div>
+      </div>
+      <div class="cat-section-arrow">▾</div>
+    </div>
+    <div class="cat-section-body">
+      <div class="sku-grid">
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">防静电屏蔽袋（铝箔袋）</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-h">极热</span>
+              <span class="sku-price">¥10–80/100只</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>层结构</td><td>四层：PET印刷层 / AL铝箔层（屏蔽层）/ 导电层 / PE密封层</td></tr>
+              <tr><td>静电屏蔽效果</td><td>屏蔽效能：<span class="param-highlight">≥40dB @1GHz</span>（符合ANSI/ESD S11.4）</td></tr>
+              <tr><td>表面电阻</td><td>外表面：10³–10⁵Ω（导静电层）；内表面：10⁹–10¹¹Ω（绝缘保护）</td></tr>
+              <tr><td>常见尺寸</td><td>60×90mm / 100×150mm / 150×200mm / 200×300mm；可定制</td></tr>
+              <tr><td>封口方式</td><td>热压封口（一次性）/ 自封口（可多次开合）/ 拉链封口（高端）</td></tr>
+              <tr><td>厚度规格</td><td>0.075mm（轻型）/ 0.1mm（标准）/ 0.125mm（重型）</td></tr>
+              <tr><td>测试标准</td><td>ANSI/ESD S11.4；IEC 61340-5-3；GB/T 4480</td></tr>
+              <tr><td>差异化要点</td><td>透明款（可视内容）vs 铝箔不透明款；印刷定制Logo（MOQ 5000只）</td></tr>
+              <tr><td>选品建议</td><td>标准款主推自封口100×150mm；定制款增加Logo印刷提升品牌溢价</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">防静电PE袋（粉红/黑色）</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-h">极热</span>
+              <span class="sku-price">¥8–50/100只</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>类型区分</td><td><span class="param-highlight">粉红色防静电袋</span>（防静电用，10⁷–10¹¹Ω）/ <span class="param-highlight">黑色导电袋</span>（屏蔽导电，10⁴–10⁶Ω）</td></tr>
+              <tr><td>材质</td><td>LLDPE + 防静电母粒（粉红）/ 碳黑导电PP（黑色）</td></tr>
+              <tr><td>厚度规格</td><td>0.05mm / 0.075mm / 0.1mm；按应用重量选择</td></tr>
+              <tr><td>形式</td><td>平口袋（热封）/ 自封袋（拉链口）/ 卷料（按需裁切）/ 连卷袋</td></tr>
+              <tr><td>常见尺寸</td><td>宽度：50mm–500mm；长度：可定制；标准高度 5cm步进</td></tr>
+              <tr><td>测试标准</td><td>EIA-625；IEC 61340-5-3；JEDEC JESD625B</td></tr>
+              <tr><td>注意</td><td><span class="param-warn">粉红袋仅防静电，无屏蔽效果；如需屏蔽需选铝箔屏蔽袋</span></td></tr>
+              <tr><td>差异化要点</td><td>可印刷ESD警示标志；食品接触级材质（电子零食包装）；厚度升级款</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">防静电气泡袋/气泡膜</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-h">热</span>
+              <span class="sku-price">¥15–100</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>结构</td><td>防静电PE气泡层（粉红/蓝色）+ 外层袋复合；气泡规格 Ø10mm/Ø15mm</td></tr>
+              <tr><td>表面电阻</td><td>气泡层：10⁷–10¹¹Ω；部分带外层铝箔（双重防护）</td></tr>
+              <tr><td>厚度</td><td>气泡膜厚：0.03+0.03mm（双层气泡）至 0.05+0.05mm；袋子壁厚另计</td></tr>
+              <tr><td>尺寸规格</td><td>袋型：100×150mm 至 400×500mm；卷型：宽300mm/500mm × 30m/50m</td></tr>
+              <tr><td>适用场景</td><td>电路板邮寄包装、液晶屏防震包装、小家电快递保护</td></tr>
+              <tr><td>差异化要点</td><td>大气泡款（更好缓冲）vs 小气泡款（更贴合）；蓝色气泡（电商主流）</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">防静电泡棉/ESD海绵</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-m">中</span>
+              <span class="sku-price">¥20–200</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>材质类型</td><td><span class="param-highlight">黑色导电海绵</span>（碳黑PE，10³–10⁵Ω）/ 粉红防静电泡棉（10⁷–10⁹Ω）</td></tr>
+              <tr><td>密度规格</td><td>15kg/m³（轻型）/ 25kg/m³（中型）/ 35kg/m³（重型承压）</td></tr>
+              <tr><td>形状供应</td><td>片材（定尺裁切）/ 卷材 / 定制异形裁切（CNC/模切）</td></tr>
+              <tr><td>常见厚度</td><td>5mm / 10mm / 20mm / 30mm / 50mm</td></tr>
+              <tr><td>适用场景</td><td>IC芯片插件存储（导电海绵）/ 电路板衬垫（防静电泡棉）/ 工具盒内衬</td></tr>
+              <tr><td>差异化要点</td><td>定制形状（针对客户特殊IC/模块）；带隔层分格的多层箱内衬</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">防静电快递袋（导电款）</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-h">热</span>
+              <span class="sku-price">¥12–60/100只</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>结构</td><td>外层：铝箔复合膜（屏蔽）/ 内层：导电PE；封口：自粘强力胶条</td></tr>
+              <tr><td>规格尺寸</td><td>A4：230×310mm / A5：175×255mm；电商主流 260×350mm+50mm封口</td></tr>
+              <tr><td>拉伸强度</td><td>纵向：≥25 N/15mm；横向：≥20 N/15mm（防运输撕裂）</td></tr>
+              <tr><td>封口方式</td><td>一次性自封胶条（撕开破坏防拆）/ 可重复封口（高端款）</td></tr>
+              <tr><td>印刷</td><td>ESD警示标志（必印）/ 客户Logo定制（MOQ 2000只）</td></tr>
+              <tr><td>适用场景</td><td>电子产品快递外包装；IC/模块出货防静电保护</td></tr>
+              <tr><td>差异化要点</td><td>带气柱缓冲内袋款（快递防摔）；定制企业Logo+二维码防伪</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">防静电IC管/IC盘</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-m">中</span>
+              <span class="sku-price">¥5–50</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>IC管材质</td><td>导电PVC / 防静电PS / 导电ABS；表面电阻 10⁴–10⁷Ω</td></tr>
+              <tr><td>管型规格</td><td>按IC封装匹配：DIP/SIP/SOP/SOIC/PLCC/QFP等对应不同规格管</td></tr>
+              <tr><td>长度规格</td><td>IC管：标准 540mm / 550mm / 长管 1200mm</td></tr>
+              <tr><td>托盘规格</td><td>JEDEC标准托盘：多种封装类型对应不同尺寸托盘</td></tr>
+              <tr><td>配套包装</td><td>搭配防静电袋/屏蔽袋使用；部分含配套泡棉</td></tr>
+              <tr><td>差异化要点</td><td>明确标注适配IC封装类型（DIP14/DIP16等）；批量包装（50管/箱）</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">防静电标签/警示贴</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-l">一般</span>
+              <span class="sku-price">¥5–30</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>标签类型</td><td>ESD警示贴（黄底黑字）/ 防静电性能标签（带电阻值）/ 工位标识贴</td></tr>
+              <tr><td>尺寸规格</td><td>10×10mm 至 50×50mm；常见圆形、正方形</td></tr>
+              <tr><td>印刷内容</td><td>ESD符号（标准）/ 品牌Logo（定制）/ 二维码（溯源追踪）</td></tr>
+              <tr><td>背胶类型</td><td>普通胶（容易撕下）/ 永久强力胶（机器设备标识）</td></tr>
+              <tr><td>选品建议</td><td>引流品定位，可与其他ESD产品捆绑免费赠送；定制款带印刷服务</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">防静电周转箱（大号）</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-m">中</span>
+              <span class="sku-price">¥30–300</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>材质</td><td>导电PP（黑色）/ 防静电ABS；表面电阻 10⁵–10⁷Ω；壁厚 3–5mm</td></tr>
+              <tr><td>主要规格</td><td>400×300×150mm（4号）/ 600×400×220mm（6号）/ 800×600×420mm（大号）</td></tr>
+              <tr><td>承重能力</td><td>静载荷：20–80kg（按规格）；动载荷：10–40kg</td></tr>
+              <tr><td>叠放方式</td><td>正向叠放 / 交叉叠放；是否带盖（防尘/密封）</td></tr>
+              <tr><td>颜色</td><td>黑色（标准导电）/ 蓝色 / 定制颜色（企业VI）</td></tr>
+              <tr><td>适用场景</td><td>晶圆盒周转、PCB电路板物流、整厂线边配料周转</td></tr>
+              <tr><td>差异化要点</td><td>带轮脚款（移动便利）；带标签槽（管理标识）；防滑脚垫</td></tr>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== CAT 5: 防静电检测仪器 ========== -->
+  <div class="cat-section">
+    <div class="cat-section-head" onclick="toggleCat(this)" style="border-color:#0ea5e9;">
+      <div class="cat-icon-big" style="background:#e0f7fa;">🧪</div>
+      <div class="cat-section-info">
+        <div class="cat-section-name">⑤ 防静电检测仪器</div>
+        <div class="cat-section-sub">电阻测试·静电场测试·腕带鞋具验证 · 高毛利B端刚需 · 6个细分</div>
+        <div class="cat-section-badges">
+          <span class="badge badge-purple">★★★★ 高毛利</span>
+          <span class="badge badge-blue">B端刚需</span>
+          <span class="badge badge-orange">专业壁垒</span>
+          <span class="badge badge-blue">P2重点</span>
+        </div>
+      </div>
+      <div class="cat-section-arrow">▾</div>
+    </div>
+    <div class="cat-section-body">
+      <div class="sku-grid">
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">防静电腕带测试仪</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-h">热</span>
+              <span class="sku-price">¥80–500</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>测试方式</td><td>将腕带插入测试孔，内建电路检测人体+腕带+接地线总电阻</td></tr>
+              <tr><td>测量范围</td><td>合格窗口：<span class="param-highlight">750kΩ–35MΩ</span>（ANSI/ESD S1.1标准窗口）</td></tr>
+              <tr><td>指示方式</td><td>三灯指示（绿=合格/黄=警告/红=不合格）/ 数字显示款（精确读数）</td></tr>
+              <tr><td>插口类型</td><td>标准4mm香蕉插 / 特殊接口（需与腕带配套）</td></tr>
+              <tr><td>供电方式</td><td>9V碱性电池 / 桌面DC供电款；连续测试次数≥5000次/节电</td></tr>
+              <tr><td>测试标准</td><td>ANSI/ESD STM97.1；IEC 61340-5-1；符合OSHA工厂安全要求</td></tr>
+              <tr><td>差异化要点</td><td>带腕带+鞋同时测试（双插口款）；带蜂鸣告警；带测试记录打印功能</td></tr>
+              <tr><td>选品建议</td><td>主推三灯指示款（简单操作）；高端款推双插口+蜂鸣+计数功能</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">表面/体积电阻测试仪</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-m">中</span>
+              <span class="sku-price">¥300–3000</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>测量范围</td><td><span class="param-highlight">10³–10¹²Ω</span>（覆盖ESD所有等级区间）</td></tr>
+              <tr><td>测试电压</td><td>标准 10V / 100V / 1000V（可选）；高阻测量需高电压激励</td></tr>
+              <tr><td>探头类型</td><td>双环探头（表面电阻）/ 平行探头 / 体积电阻探头（穿透测量）</td></tr>
+              <tr><td>精度</td><td>±5%（中档）；±2%（高端）；测量重复性 ≤3%</td></tr>
+              <tr><td>显示方式</td><td>LCD数字显示；部分带USB导出数据</td></tr>
+              <tr><td>测试标准</td><td>IEC 61340-2-3（表面电阻）；ASTM D257（体积/表面电阻率）</td></tr>
+              <tr><td>适用场景</td><td>来料检验（台垫/防静电服/ESD地板入厂测试）；定期巡检</td></tr>
+              <tr><td>差异化要点</td><td>多档测试电压可选；双测量（表面+体积同测）；内置记忆存储</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">静电场测试仪（法拉第杯）</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-m">中</span>
+              <span class="sku-price">¥500–5000</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>测量原理</td><td>非接触式感应测量；法拉第杯内置测量放置物体的静电量</td></tr>
+              <tr><td>测量范围</td><td>静电场强：±200V 至 ±20kV；分辨率：1V</td></tr>
+              <tr><td>响应时间</td><td>&lt;0.1s（快速响应，生产线实时监控）</td></tr>
+              <tr><td>类型</td><td>手持式（巡检用）/ 台式（固定监测）/ 在线式（流水线集成）</td></tr>
+              <tr><td>测量距离</td><td>接触式（法拉第杯）/ 非接触：25mm标准距离</td></tr>
+              <tr><td>测试标准</td><td>ANSI/ESD STM3.1；IEC 61340-2-1</td></tr>
+              <tr><td>差异化要点</td><td>带RS232/USB数据接口（MES系统对接）；报警阈值可设置</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">人体综合测试仪（腕带+鞋）</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-m">中</span>
+              <span class="sku-price">¥200–1500</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>测试项目</td><td>腕带电阻 + 防静电鞋/鞋底电阻 + 人体总阻 — <span class="param-highlight">同时三项检测</span></td></tr>
+              <tr><td>合格窗口</td><td>腕带：750kΩ–35MΩ；防静电鞋：10⁵–10⁸Ω；导电鞋：&lt;10⁵Ω</td></tr>
+              <tr><td>测试时间</td><td>&lt;2秒完成全部测试；适合员工进出厂区快速验证</td></tr>
+              <tr><td>踏板设计</td><td>双金属踏板（左右脚分测）；踏板面积：400×400mm（标准）</td></tr>
+              <tr><td>显示方式</td><td>红绿灯直观指示；可选数字显示和蜂鸣器</td></tr>
+              <tr><td>数据记录</td><td>内置存储可记录测试结果（时间戳+结果）；支持导出</td></tr>
+              <tr><td>适用场景</td><td>半导体工厂入口安全门；洁净室更衣区验证</td></tr>
+              <tr><td>差异化要点</td><td>联网版可上传MES系统；带刷卡记录（员工考勤联动）</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">ESD离子平衡测试仪</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-l">一般</span>
+              <span class="sku-price">¥1000–8000</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>测量目的</td><td>评估离子风机的离子平衡偏压（正负离子比例）和衰减效率</td></tr>
+              <tr><td>测量范围</td><td>偏压：±200V；衰减时间测量：可测1kV→100V的消除时间</td></tr>
+              <tr><td>标准板</td><td>内置FISP（法拉第感应标准板）；按ANSI/ESD SP12.1标准配置</td></tr>
+              <tr><td>测量距离</td><td>标准：300mm 和 600mm 测试距离</td></tr>
+              <tr><td>数据输出</td><td>USB接口；配套分析软件；打印校验报告（ISO认证工厂必需）</td></tr>
+              <tr><td>测试标准</td><td>ANSI/ESD SP12.1；IEC 61340-4-7</td></tr>
+              <tr><td>选品建议</td><td>高端B端仪器，适合认证级销售，需提供完整校准证书</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">防静电鞋/地板测试仪</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-l">一般</span>
+              <span class="sku-price">¥300–2000</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>测量对象</td><td>防静电鞋底电阻 / 地板/地垫表面电阻 / 导体接地电阻</td></tr>
+              <tr><td>测量范围</td><td>10³–10¹²Ω；分辨率 1位有效数字（科学计数法显示）</td></tr>
+              <tr><td>测试电压</td><td>10V / 100V（按被测物选择）</td></tr>
+              <tr><td>地板测量电极</td><td>5磅重量电极（按ANSI标准压力）；圆形铝电极Ø65mm</td></tr>
+              <tr><td>适用场景</td><td>ESD防护体系年度审计；工厂改造后地板验收；防静电鞋来料检验</td></tr>
+              <tr><td>差异化要点</td><td>配备完整测试报告模板；多种探头选配满足不同场景</td></tr>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== CAT 6: 防静电地坪材料 ========== -->
+  <div class="cat-section">
+    <div class="cat-section-head" onclick="toggleCat(this)" style="border-color:#ec4899;">
+      <div class="cat-icon-big" style="background:#fce7f3;">🏢</div>
+      <div class="cat-section-info">
+        <div class="cat-section-name">⑥ 防静电地坪材料</div>
+        <div class="cat-section-sub">地板·地垫·地毯·涂料 · 大额B端 · 进入门槛高 · 5个细分</div>
+        <div class="cat-section-badges">
+          <span class="badge badge-orange">★★★ 大额订单</span>
+          <span class="badge badge-blue">纯B端</span>
+          <span class="badge badge-red">进入门槛高</span>
+          <span class="badge badge-blue">P4后期</span>
+        </div>
+      </div>
+      <div class="cat-section-arrow">▾</div>
+    </div>
+    <div class="cat-section-body">
+      <div class="sku-grid">
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">防静电地板/活动地板</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-m">中</span>
+              <span class="sku-price">¥50–300/㎡</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>材质类型</td><td>PVC防静电地板（贴面型）/ 全钢活动地板（机房级）/ HPL贴面地板</td></tr>
+              <tr><td>系统电阻</td><td>点对点：<span class="param-highlight">10⁵–10⁹Ω</span>（防静电）；&lt;10⁵Ω（导电）</td></tr>
+              <tr><td>规格尺寸</td><td>PVC贴面：1.0m×1.5m/2.0m；全钢活动地板：600×600mm；厚度32mm/35mm</td></tr>
+              <tr><td>承重规格</td><td>集中荷载：≥1000N/点；均布荷载：≥2000N/㎡（机房级：≥3000N/㎡）</td></tr>
+              <tr><td>接地方式</td><td>铜网接地 / 接地汇流排 / 点接地（螺柱式）</td></tr>
+              <tr><td>表面处理</td><td>PVC贴面 / 钢板高温静电喷涂 / 防火板（HPL）贴面</td></tr>
+              <tr><td>测试标准</td><td>GB/T 10294；IEC 61340-4-1；EN 1081（PVC地板）</td></tr>
+              <tr><td>选品建议</td><td><span class="param-warn">纯B端大订单商品，电商多为询价下单，需有安装配套方案</span></td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">防静电地垫（工位垫加厚）</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-h">热</span>
+              <span class="sku-price">¥20–300</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>材质结构</td><td>导电橡胶（上层）+ 绝缘橡胶（下层）双层结构；防滑底纹</td></tr>
+              <tr><td>厚度规格</td><td>3mm（轻型）/ 5mm（标准）/ 8mm（加厚站立疲劳缓解）/ 10mm（防疲劳）</td></tr>
+              <tr><td>表面电阻</td><td>上层：10⁵–10⁸Ω；颜色：黑色/绿色/蓝色</td></tr>
+              <tr><td>常见尺寸</td><td>600×900mm（工位）/ 900×1500mm（双人工位）/ 1200×1800mm（大型）</td></tr>
+              <tr><td>表面处理</td><td>平面（标准）/ 方格纹（防滑）/ 波浪纹（防疲劳）</td></tr>
+              <tr><td>温度范围</td><td>使用温度：-20°C 至 +80°C；存储温度：-40°C 至 +120°C</td></tr>
+              <tr><td>测试标准</td><td>IEC 61340-4-1；ANSI/ESD S4.1</td></tr>
+              <tr><td>差异化要点</td><td>防疲劳厚款（8mm+）；附接地线的完整套装；按平方米定制购买</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">防静电地毯/卷材</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-m">中</span>
+              <span class="sku-price">¥30–200/㎡</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>材质</td><td>防静电尼龙纤维 / 导电PP针刺毡；背面：防滑橡胶或PVC背</td></tr>
+              <tr><td>系统电阻</td><td>10⁵–10⁹Ω（需配合导电接地条使用）</td></tr>
+              <tr><td>克重规格</td><td>600g/㎡（轻型）/ 900g/㎡（标准）/ 1200g/㎡（重型商用）</td></tr>
+              <tr><td>幅宽规格</td><td>1.0m / 1.2m / 1.5m / 2.0m（工程常用）</td></tr>
+              <tr><td>适用场景</td><td>办公室/机房防静电铺设；计算机房；通讯机房</td></tr>
+              <tr><td>差异化要点</td><td>多颜色选择（商务灰/蓝/米）；可配套接地铜箔条套装销售</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">导静电涂料/地坪漆</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-l">一般</span>
+              <span class="sku-price">¥80–500/桶</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>涂料类型</td><td>环氧防静电涂料（主流）/ 聚氨酯防静电涂料（耐磨）/ 水性防静电漆</td></tr>
+              <tr><td>固化后电阻</td><td>防静电型：10⁵–10⁸Ω；导电型：10³–10⁵Ω</td></tr>
+              <tr><td>涂覆厚度</td><td>底涂：0.1mm；面涂：0.2–0.3mm；总厚度：0.3–0.5mm</td></tr>
+              <tr><td>附着力</td><td>≥2MPa（划格法）；耐冲击≥50cm·kg</td></tr>
+              <tr><td>固化时间</td><td>表干：4h；实干：24h；全固化：7天后可正常使用</td></tr>
+              <tr><td>施工条件</td><td>底材含水率≤8%；温度5–35°C；湿度≤85%</td></tr>
+              <tr><td>适用场景</td><td>工厂车间地面改造；实验室地面；洁净室地面翻新</td></tr>
+              <tr><td>选品建议</td><td><span class="param-warn">施工类产品，需配套技术支持和施工手册</span>；以B端工程询价为主</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">防静电接地线/铜带</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-m">中</span>
+              <span class="sku-price">¥10–200</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>铜带规格</td><td>宽度：5mm / 10mm / 20mm / 25mm；厚度：0.03mm / 0.05mm（导电胶带）</td></tr>
+              <tr><td>导体材质</td><td>纯铜（导电性最佳）/ 铜箔 + 导电胶层；电阻率 ≤0.017Ω·mm²/m</td></tr>
+              <tr><td>背胶类型</td><td>导电压敏胶（导电面朝下，全面导通）/ 单面导电胶 / 双面导电胶</td></tr>
+              <tr><td>用途</td><td>地毯铜箔接地条；ESD地板铺设接地；静电消除系统接地连接</td></tr>
+              <tr><td>卷长规格</td><td>5m / 10m / 20m / 50m；按需要铺设长度选购</td></tr>
+              <tr><td>差异化要点</td><td>配套接地线+铜带+夹具的完整接地套装（提升客单价）</td></tr>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== CAT 7: 无尘洁净防护服 ========== -->
+  <div class="cat-section">
+    <div class="cat-section-head" onclick="toggleCat(this)" style="border-color:#22c55e;">
+      <div class="cat-icon-big" style="background:#dcfce7;">🥼</div>
+      <div class="cat-section-info">
+        <div class="cat-section-name">⑦ 无尘洁净防护服</div>
+        <div class="cat-section-sub">无尘服·帽·鞋套·口罩·手套 · 高频消耗 · B端批发 · 8个细分</div>
+        <div class="cat-section-badges">
+          <span class="badge badge-green">★★★★ 高频消耗</span>
+          <span class="badge badge-blue">B端批发</span>
+          <span class="badge badge-purple">定制空间大</span>
+          <span class="badge badge-green">P1首选</span>
+        </div>
+      </div>
+      <div class="cat-section-arrow">▾</div>
+    </div>
+    <div class="cat-section-body">
+      <div class="sku-grid">
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">无尘连体服（Class 10–10000）</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-h">热</span>
+              <span class="sku-price">¥80–500</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>洁净等级</td><td><span class="param-highlight">ISO Class 5（100级）</span> / ISO Class 6（1000级）/ ISO Class 7（10000级）/ ISO Class 8（100000级）</td></tr>
+              <tr><td>面料类型</td><td>涤纶长丝织物（低尘低静电）/ 导电纤维（ESD+无尘双效）/ Tyvek（一次性）</td></tr>
+              <tr><td>发尘量</td><td>高等级：≤100个/cf（Class 100）；洗涤后仍达标（可洗次数≥50次）</td></tr>
+              <tr><td>缝合工艺</td><td>超声波焊接（无线头）/ 包边缝合（低落纤）；接缝处理决定等级</td></tr>
+              <tr><td>拉链规格</td><td>导电YKK拉链（高端）/ 标准尼龙拉链（中端）；口袋数量：0–4个</td></tr>
+              <tr><td>颜色规格</td><td>白色（医疗/半导体）/ 蓝色（电子厂标准）/ 黄色（隔离区分）/ 定制色</td></tr>
+              <tr><td>认证标准</td><td>ISO 14644-1；EN 13034（液态防护）；ESD S20.20（防静电版）</td></tr>
+              <tr><td>差异化要点</td><td>高等级面料（Tyvek一次性）vs 可重复洗涤款；颜色Logo印刷定制</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">无尘帽/头套/连头面罩</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-h">极热</span>
+              <span class="sku-price">¥5–60</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>帽型分类</td><td>蘑菇帽（圆顶无檐）/ 医用帽（褶皱款）/ 连头面罩（头颈一体）/ 兔耳帽（洁净室常用）</td></tr>
+              <tr><td>面料规格</td><td>28gsm / 35gsm / 42gsm 无纺布；可洗款：涤纶长丝≥120g/m²</td></tr>
+              <tr><td>尺寸规格</td><td>均码弹力口（适合57–61cm头围）/ S/M/L可选（分体式）</td></tr>
+              <tr><td>落尘量</td><td>一次性款：落纤量&lt;100个/cf（ISO Class 8合格）；高端款&lt;10个/cf</td></tr>
+              <tr><td>适用场景</td><td>电子厂组装车间 / 食品加工 / 医药/医疗器械无菌生产 / 洁净室维护</td></tr>
+              <tr><td>包装规格</td><td>100只/袋（一次性标准）；可洗款10只/包</td></tr>
+              <tr><td>差异化要点</td><td>连头面罩款（头发+颈部完全包裹）；颜色分级管理（白/蓝/绿）；定制绣Logo</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">无尘鞋套/无尘靴套</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-h">极热</span>
+              <span class="sku-price">¥3–30/双</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>鞋套类型</td><td>平底无纺布鞋套（最低端）/ PE薄膜防水鞋套 / 防静电无尘鞋套（高端）/ 无尘靴套（小腿覆盖）</td></tr>
+              <tr><td>面料克重</td><td>PP无纺布：35–50gsm；涤纶织物款：≥100g/m²（可洗）</td></tr>
+              <tr><td>鞋底处理</td><td>光底（不适合防滑）/ PVC防滑底 / 导电橡胶底（防静电+防滑）</td></tr>
+              <tr><td>尺寸规格</td><td>均码（36–44）/ 大码（45–47）/ XL码（48+）；松紧口设计</td></tr>
+              <tr><td>包装规格</td><td>100双/袋（一次性）；10双/包（可洗款）</td></tr>
+              <tr><td>认证</td><td>防静电款需符合 ANSI/ESD S9.1（脚腕带）或 IEC 61340-5-1</td></tr>
+              <tr><td>差异化要点</td><td>防静电+防滑底组合（高端场景）；靴套款（防液体飞溅）；定制颜色</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">无尘手套（乳胶/丁腈/PU）</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-h">极热</span>
+              <span class="sku-price">¥15–100/双</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>材质分类</td><td><span class="param-highlight">乳胶（天然橡胶）</span> / 丁腈（NBR，无乳胶过敏）/ PU（涂层款，最轻薄）/ 氯丁橡胶</td></tr>
+              <tr><td>洁净等级</td><td>ISO Class 5（100级）/ ISO Class 3（10级）；ISO Class 3需无硫磺无粉</td></tr>
+              <tr><td>厚度规格</td><td>0.05–0.08mm（PU超薄）；0.10–0.15mm（乳胶标准）；0.12–0.20mm（丁腈加厚）</td></tr>
+              <tr><td>有粉/无粉</td><td><span class="param-warn">洁净室、医疗、光学场景必须选无粉款</span>；无粉氯洗工艺</td></tr>
+              <tr><td>AQL标准</td><td>AQL 1.5（高质量）/ AQL 0.65（医疗级）；每批抽检比例</td></tr>
+              <tr><td>微粒数量</td><td>ISO Class 5手套：≤100个微粒/手套（≥0.1μm）</td></tr>
+              <tr><td>包装规格</td><td>100只/盒（散装）；10双真空袋独立包装（高等级）</td></tr>
+              <tr><td>差异化要点</td><td>低内毒素级（医疗/生物制药）；触屏兼容版（导电指尖涂层）</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">无尘室口罩（3层/5层）</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-m">中</span>
+              <span class="sku-price">¥10–80/盒</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>过滤等级</td><td>3层基础款（&gt;95%@0.3μm）/ 5层高效款（≥99.9%@0.3μm）</td></tr>
+              <tr><td>面料规格</td><td>内外层：无纺布（无落纤）；滤芯：熔喷布（高效过滤）</td></tr>
+              <tr><td>鼻夹规格</td><td>铝合金鼻夹（3段弯折）/ 不含金属款（无金属净化室）</td></tr>
+              <tr><td>挂绳类型</td><td>耳挂式 / 头戴式（更牢固，适合长时间戴用）</td></tr>
+              <tr><td>适用场景</td><td>ISO Class 6–8 洁净室；医药/食品/电子无菌生产；口腔科/手术室</td></tr>
+              <tr><td>认证标准</td><td>YY 0469（医用外科口罩）/ GB 19083（医用防护口罩）/ EN 14683</td></tr>
+              <tr><td>差异化要点</td><td>独立灭菌包装款（开袋即用）；可呼吸性好（低呼吸阻力设计）</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">无尘护目镜/面屏</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-m">中</span>
+              <span class="sku-price">¥10–80</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>镜片材质</td><td>PC（聚碳酸酯，抗冲击）/ AC（醋酸纤维，轻薄）/ 防雾涂层（推荐）</td></tr>
+              <tr><td>防静电处理</td><td>防静电涂层处理（表面电阻 10⁸–10¹⁰Ω）；防止镜片吸附颗粒</td></tr>
+              <tr><td>视野角度</td><td>护目镜：水平180°/垂直60°；面屏：水平170°/垂直90°</td></tr>
+              <tr><td>防护级别</td><td>EN 166（欧标）/ ANSI Z87.1（美标）；冲击等级 F/B/A</td></tr>
+              <tr><td>适用场景</td><td>化学品操作（防溅）/ 激光防护（有色镜片）/ 常规洁净室防尘</td></tr>
+              <tr><td>差异化要点</td><td>防雾涂层款（长时间佩戴）；可拆卸镜片（更换备用镜片）；防UV款</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">无尘分体服（上衣+裤）</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-h">热</span>
+              <span class="sku-price">¥50–400</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>适用场景</td><td>ISO Class 7–8（10000–100000级）洁净室；日常穿戴更换方便</td></tr>
+              <tr><td>面料规格</td><td>涤纶长丝（低发尘）/ 涤纶+导电纤维（防静电兼容款）</td></tr>
+              <tr><td>版型规格</td><td>XS/S/M/L/XL/XXL/XXXL（工厂需大码覆盖）；宽松型 vs 修身型</td></tr>
+              <tr><td>腰带设计</td><td>松紧腰（通用）/ 抽绳腰（可调）/ 工装腰（多口袋）</td></tr>
+              <tr><td>差异化要点</td><td>定制颜色+绣厂徽（B端大批采购）；上下套装合卖降低购买门槛</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">无尘袜套/腿套</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-l">一般</span>
+              <span class="sku-price">¥5–30</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>材质</td><td>防静电涤纶长丝 / 无纺布（一次性）</td></tr>
+              <tr><td>防静电处理</td><td>导电纤维编织或涂层处理；电阻 10⁶–10⁸Ω</td></tr>
+              <tr><td>覆盖范围</td><td>脚套（踝关节以下）/ 小腿套（膝盖以下）/ 腿套（大腿以下）</td></tr>
+              <tr><td>适用场景</td><td>需防止外裤灰尘带入洁净区；搭配无尘靴套使用</td></tr>
+              <tr><td>差异化要点</td><td>通常作为配件搭配无尘服套装销售；提升客单价</td></tr>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== CAT 8: 洁净室耗材 ========== -->
+  <div class="cat-section">
+    <div class="cat-section-head" onclick="toggleCat(this)" style="border-color:#06b6d4;">
+      <div class="cat-icon-big" style="background:#e0f7fa;">🧹</div>
+      <div class="cat-section-info">
+        <div class="cat-section-name">⑧ 洁净室耗材</div>
+        <div class="cat-section-sub">擦拭布·棉签·粘尘滚·无尘纸 · 超高复购 · 进入门槛低 · 8个细分</div>
+        <div class="cat-section-badges">
+          <span class="badge badge-green">★★★★★ 超高复购</span>
+          <span class="badge badge-blue">C+B兼顾</span>
+          <span class="badge badge-orange">进入门槛低</span>
+          <span class="badge badge-green">P1首选</span>
+        </div>
+      </div>
+      <div class="cat-section-arrow">▾</div>
+    </div>
+    <div class="cat-section-body">
+      <div class="sku-grid">
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">无尘擦拭布（聚酯/超细纤维）</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-h">极热</span>
+              <span class="sku-price">¥10–150/包</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>面料类型</td><td><span class="param-highlight">100%聚酯长丝</span>（低尘高效）/ 超细纤维（吸液强）/ 聚酯+尼龙混纺 / Texwipe专业款</td></tr>
+              <tr><td>洁净等级</td><td>Class 100（ISO 5）/ Class 1000（ISO 6）/ Class 10000（ISO 7）</td></tr>
+              <tr><td>克重规格</td><td>60g/m²（轻薄款）/ 80g/m²（标准）/ 120g/m²（加厚吸液款）</td></tr>
+              <tr><td>边缘处理</td><td><span class="param-highlight">激光切边</span>（落纤最少）/ 热封边 / 卷边（低端）；切边工艺影响洁净等级</td></tr>
+              <tr><td>尺寸规格</td><td>9×9cm（精密）/ 12×12cm（标准）/ 23×23cm（大面积）/ 30×30cm（工业）</td></tr>
+              <tr><td>吸液倍率</td><td>普通款：自身重量4–6倍；超强款：8–10倍（溶剂擦拭用）</td></tr>
+              <tr><td>微粒数量</td><td>100级布：每张&lt;5个（≥0.5μm）；需附洁净检测报告</td></tr>
+              <tr><td>包装方式</td><td>散装（100张/袋）/ 独立对折包装（精密工艺）/ 预润湿款（含IPA溶剂）</td></tr>
+              <tr><td>测试标准</td><td>ASTM F51（微粒）；IES-RP-CC004（清洁室擦拭）</td></tr>
+              <tr><td>差异化要点</td><td>预润湿IPA款（开袋即用）；ESD防静电处理；激光切边高端款</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">无尘棉签（净化级）</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-h">热</span>
+              <span class="sku-price">¥5–60/包</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>棉头材质</td><td><span class="param-highlight">聚氨酯泡棉（PU Foam）</span>（吸液最强）/ 聚酯绒头 / 棉花头（低端）</td></tr>
+              <tr><td>杆材质</td><td>PP杆（标准）/ 钢柄（无扭曲，精密）/ 纸杆（一次性）/ ESD导电杆</td></tr>
+              <tr><td>头部形状</td><td>圆头（通用）/ 矩形头（平面擦拭）/ 尖头（细缝清洁）/ 铲形（沟槽）</td></tr>
+              <tr><td>尺寸规格</td><td>杆长：71mm / 100mm / 152mm；头宽：3mm / 5mm / 8mm / 10mm</td></tr>
+              <tr><td>粒子要求</td><td>PU头：≤20个（≥0.5μm）/支；低离子析出（ICP测试&lt;1ppb）</td></tr>
+              <tr><td>溶剂兼容</td><td>IPA（异丙醇）/ 乙醇 / 丙酮 / MEK；部分ESD款带导电杆防静电</td></tr>
+              <tr><td>包装规格</td><td>10支/袋（精密样品）/ 50支/袋（标准）/ 100支/袋（大量）/ 独立包装</td></tr>
+              <tr><td>差异化要点</td><td>PU泡棉头吸液10倍+（远超棉头）；预润湿IPA款即开即用；ESD导电杆款</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">粘尘滚轮/粘尘垫</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-h">热</span>
+              <span class="sku-price">¥10–100</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>类型区分</td><td><span class="param-highlight">粘尘滚轮</span>（服装除尘）/ <span class="param-highlight">粘尘垫</span>（鞋底除尘）/ 工业级地垫型</td></tr>
+              <tr><td>滚轮规格</td><td>宽度：110mm / 150mm / 200mm；层数：20层/60层/80层</td></tr>
+              <tr><td>粘性等级</td><td>轻粘（普通灰尘）/ 中粘（细纤维）/ 强粘（重污染环境）</td></tr>
+              <tr><td>粘尘垫规格</td><td>45×90cm / 60×90cm；层数：30层/60层；颜色：蓝色（标准）</td></tr>
+              <tr><td>粘性保持</td><td>粘尘垫：单层使用次数≥50次（进出洁净室踩踏）</td></tr>
+              <tr><td>适用场景</td><td>滚轮：服装除尘/纸箱开箱前除尘；粘尘垫：洁净室入口地面</td></tr>
+              <tr><td>差异化要点</td><td>粘尘垫框架套装（含铝框底盘，更专业美观）；超强粘性替换芯</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">无尘纸/洁净室记录纸</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-m">中</span>
+              <span class="sku-price">¥15–80</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>材质类型</td><td>聚酯薄膜（Mylar）/ 聚丙烯合成纸 / 木浆+聚酯复合纸；低尘低离子</td></tr>
+              <tr><td>克重规格</td><td>100g/m²（A4标准）/ 200g/m²（厚款）；厚度 0.1–0.2mm</td></tr>
+              <tr><td>粒子数量</td><td>每张(A4)：≤5000个(≥0.5μm)；高端款&lt;1000个</td></tr>
+              <tr><td>离子含量</td><td>Na+/Cl- 各≤5ppb（电子/半导体行业要求）</td></tr>
+              <tr><td>书写方式</td><td>圆珠笔/铅笔均可；部分为打印专用（激光打印兼容）</td></tr>
+              <tr><td>包装规格</td><td>A4：100张/包；A5：200张/包；独立PE袋密封包装</td></tr>
+              <tr><td>适用场景</td><td>洁净室内生产记录、SOP文件、检测报告打印（禁用普通纸）</td></tr>
+              <tr><td>差异化要点</td><td>可打印+低离子双认证款；无碳复写款（免碳粉脱落）</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">无尘室清洁拖布/清洁组合</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-m">中</span>
+              <span class="sku-price">¥30–300</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>拖布类型</td><td>超细纤维平拖（吸尘最佳）/ 棉质拖布（吸液强）/ 一次性无纺布地拖</td></tr>
+              <tr><td>杆材材质</td><td>铝合金杆（导静电）/ 不锈钢杆（耐腐蚀）/ PP杆（轻便经济）</td></tr>
+              <tr><td>洁净等级</td><td>擦布等级：ISO Class 6–8；拖布拖头可洗次数：100–200次</td></tr>
+              <tr><td>拖头规格</td><td>宽度：25cm / 40cm / 60cm；固定式 vs 可更换拖头</td></tr>
+              <tr><td>配套清洁桶</td><td>导电PP清洁桶（防静电）/ 双桶（干湿分离）</td></tr>
+              <tr><td>差异化要点</td><td>完整清洁套装（杆+头+桶+备用布）；一次性高洁净级拖布</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">无尘室专用胶带</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-m">中</span>
+              <span class="sku-price">¥10–60/卷</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>胶带类型</td><td>聚酯薄膜基材（低尘）/ 铝箔胶带（屏蔽+密封）/ 导电铜箔胶带</td></tr>
+              <tr><td>背胶材质</td><td>丙烯酸胶（低离子析出）/ 橡胶胶（强粘）；无硅胶（防污染）</td></tr>
+              <tr><td>宽度规格</td><td>12mm / 19mm / 25mm / 50mm；标准长度：33m/66m</td></tr>
+              <tr><td>粘力等级</td><td>150g/25mm（轻粘标识用）至 700g/25mm（强力密封）</td></tr>
+              <tr><td>离子含量</td><td>Na+/Cl- ≤5ppb（半导体级）；残胶测试（撕除后无残留）</td></tr>
+              <tr><td>适用场景</td><td>遮蔽工序（掩蔽/贴合）/ ESD地板接地 / 设备标识 / 包装密封</td></tr>
+              <tr><td>差异化要点</td><td>无残胶款（精密工艺必需）；高温耐受款（回流焊前遮蔽）</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">防静电无尘湿巾</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-m">中</span>
+              <span class="sku-price">¥15–100</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>湿润介质</td><td>IPA（70%异丙醇）/ 去离子水 / IPA+去离子水（70/30混合）</td></tr>
+              <tr><td>基布材质</td><td>聚酯无纺布 / 聚酯+纤维素混纺；低落纤激光切边</td></tr>
+              <tr><td>含液量</td><td>200–300%（充分润湿，但不滴液）</td></tr>
+              <tr><td>包装规格</td><td>30张/桶（桶装湿巾）/ 10张/袋（便携独立袋）/ 150张/桶（大包装）</td></tr>
+              <tr><td>IPA含量认证</td><td>需附GC检测报告（IPA纯度&gt;99.9%；含水量&lt;1%）</td></tr>
+              <tr><td>适用场景</td><td>LCD屏幕擦拭 / 精密设备去油脂 / SMT前清洁 / 光学镜头擦试</td></tr>
+              <tr><td>差异化要点</td><td>防静电处理基布+IPA双效款；独立密封包装（长期保湿）；低残留无痕款</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="sku-card">
+          <div class="sku-head" onclick="toggleSku(this)">
+            <div class="sku-name">无尘室标签纸/贴纸</div>
+            <div class="sku-price-hot">
+              <span class="hot-tag hot-l">一般</span>
+              <span class="sku-price">¥8–50</span>
+              <span class="sku-toggle-btn">展开参数 ▾</span>
+            </div>
+          </div>
+          <div class="sku-params">
+            <table class="param-table">
+              <tr><td>基材材质</td><td>聚酯薄膜（耐溶剂）/ 聚丙烯（柔软）/ 无纺布（轻薄，可手撕）</td></tr>
+              <tr><td>背胶类型</td><td>丙烯酸胶（低离子）/ 永久强力胶 / 可移除胶（临时标识）</td></tr>
+              <tr><td>打印兼容</td><td>激光打印 / 热敏打印 / 喷墨打印（需注明适用打印机类型）</td></tr>
+              <tr><td>规格尺寸</td><td>A4整张打印版（21×29.7cm）/ 预分切规格（各种标准尺寸）</td></tr>
+              <tr><td>适用场景</td><td>洁净室产品标识 / 批次追溯 / 工位标牌 / 设备资产标识</td></tr>
+              <tr><td>差异化要点</td><td>防篡改标签（撕开变色）；耐高温款（回流焊后仍清晰）；带条码/二维码预打印</td></tr>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div><!-- END TAB params -->
+
+<!-- ====== TAB: 对比矩阵 ====== -->
+<div id="tab-matrix" class="tab-panel">
+  <div class="sec-title">8大类目综合对比矩阵</div>
+  <div class="matrix-wrap">
+    <table class="matrix-table">
+      <thead>
+        <tr>
+          <th>类目</th>
+          <th>电商热度</th>
+          <th>平均毛利率</th>
+          <th>客单价区间</th>
+          <th>竞争烈度</th>
+          <th>客户群</th>
+          <th>复购周期</th>
+          <th>进入门槛</th>
+          <th>核心参数数量</th>
+          <th>推荐优先级</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>🖐 人体防静电装备</strong></td>
+          <td><span class="stars">★★★★★</span></td>
+          <td>35–55%</td>
+          <td>¥5–300</td>
+          <td><span style="color:#ef4444;font-weight:700;">高</span></td>
+          <td>C+B</td>
+          <td>1–3月</td>
+          <td>低</td>
+          <td>10–15项/品</td>
+          <td><span class="priority-tag p1">P1 首选</span></td>
+        </tr>
+        <tr>
+          <td><strong>🌬 静电消除设备</strong></td>
+          <td><span class="stars">★★★★</span></td>
+          <td>40–60%</td>
+          <td>¥80–3000</td>
+          <td><span style="color:#f59e0b;font-weight:700;">中</span></td>
+          <td>B端</td>
+          <td>12–24月</td>
+          <td>中</td>
+          <td>12–15项/品</td>
+          <td><span class="priority-tag p2">P2 重点</span></td>
+        </tr>
+        <tr>
+          <td><strong>🛠 防静电工具器具</strong></td>
+          <td><span class="stars">★★★★★</span></td>
+          <td>40–65%</td>
+          <td>¥10–500</td>
+          <td><span style="color:#ef4444;font-weight:700;">高</span></td>
+          <td>C+B</td>
+          <td>3–6月</td>
+          <td>低</td>
+          <td>8–12项/品</td>
+          <td><span class="priority-tag p1">P1 首选</span></td>
+        </tr>
+        <tr>
+          <td><strong>📦 防静电包装材料</strong></td>
+          <td><span class="stars">★★★★★</span></td>
+          <td>20–40%</td>
+          <td>¥8–300</td>
+          <td><span style="color:#ef4444;font-weight:700;">极高</span></td>
+          <td>B端为主</td>
+          <td>0.5–2月</td>
+          <td>低</td>
+          <td>8–10项/品</td>
+          <td><span class="priority-tag p3">P3 视情</span></td>
+        </tr>
+        <tr>
+          <td><strong>🧪 防静电检测仪器</strong></td>
+          <td><span class="stars">★★★</span></td>
+          <td>45–70%</td>
+          <td>¥80–8000</td>
+          <td><span style="color:#22c55e;font-weight:700;">低</span></td>
+          <td>B端</td>
+          <td>12–36月</td>
+          <td>高</td>
+          <td>10–14项/品</td>
+          <td><span class="priority-tag p2">P2 重点</span></td>
+        </tr>
+        <tr>
+          <td><strong>🏢 防静电地坪材料</strong></td>
+          <td><span class="stars">★★</span></td>
+          <td>30–50%</td>
+          <td>¥20–500/㎡</td>
+          <td><span style="color:#f59e0b;font-weight:700;">中</span></td>
+          <td>纯B端</td>
+          <td>36–60月</td>
+          <td>极高</td>
+          <td>8–12项/品</td>
+          <td><span class="priority-tag p4">P4 后期</span></td>
+        </tr>
+        <tr>
+          <td><strong>🥼 无尘洁净防护服</strong></td>
+          <td><span class="stars">★★★★</span></td>
+          <td>35–55%</td>
+          <td>¥5–500</td>
+          <td><span style="color:#ef4444;font-weight:700;">高</span></td>
+          <td>B端批发</td>
+          <td>1–3月</td>
+          <td>低</td>
+          <td>8–12项/品</td>
+          <td><span class="priority-tag p1">P1 首选</span></td>
+        </tr>
+        <tr>
+          <td><strong>🧹 洁净室耗材</strong></td>
+          <td><span class="stars">★★★★★</span></td>
+          <td>40–65%</td>
+          <td>¥5–300</td>
+          <td><span style="color:#f59e0b;font-weight:700;">中</span></td>
+          <td>C+B</td>
+          <td>0.5–1月</td>
+          <td>低</td>
+          <td>8–12项/品</td>
+          <td><span class="priority-tag p1">P1 首选</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sec-title">关键参数指标总览</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;">
+    <div style="background:var(--card);border-radius:12px;padding:18px;box-shadow:var(--shadow);border-top:3px solid #3b82f6;">
+      <div style="font-weight:700;font-size:15px;margin-bottom:10px;">⚡ ESD核心参数体系</div>
+      <div style="font-size:13px;color:var(--muted);line-height:1.8;">
+        • 表面/体积电阻率（Ω）<br>
+        • 电荷保留电位（V）<br>
+        • 离子平衡偏压（V）<br>
+        • 衰减时间（秒，1kV→100V）<br>
+        • ESD标准：ANSI/IEC/GB三套体系
+      </div>
+    </div>
+    <div style="background:var(--card);border-radius:12px;padding:18px;box-shadow:var(--shadow);border-top:3px solid #10b981;">
+      <div style="font-weight:700;font-size:15px;margin-bottom:10px;">🧹 洁净室核心参数体系</div>
+      <div style="font-size:13px;color:var(--muted);line-height:1.8;">
+        • 洁净等级（ISO Class / 级）<br>
+        • 微粒数量（个/cf 或 个/m³）<br>
+        • 落纤量（根/dm²）<br>
+        • 离子析出（ppb：Na/Cl/K）<br>
+        • 可洗次数（次，性能保持）
+      </div>
+    </div>
+    <div style="background:var(--card);border-radius:12px;padding:18px;box-shadow:var(--shadow);border-top:3px solid #f97316;">
+      <div style="font-weight:700;font-size:15px;margin-bottom:10px;">📐 通用选品参数指标</div>
+      <div style="font-size:13px;color:var(--muted);line-height:1.8;">
+        • 材质成分（聚酯/丁腈/碳纤维）<br>
+        • 尺寸规格（mm/cm，标准化）<br>
+        • 认证标准（ANSI/CE/GB）<br>
+        • 耐温范围（°C）<br>
+        • 包装规格（每包数量/重量）
+      </div>
+    </div>
+    <div style="background:var(--card);border-radius:12px;padding:18px;box-shadow:var(--shadow);border-top:3px solid #8b5cf6;">
+      <div style="font-weight:700;font-size:15px;margin-bottom:10px;">🎯 电商差异化参数方向</div>
+      <div style="font-size:13px;color:var(--muted);line-height:1.8;">
+        • 标注具体数值（非「防静电」笼统描述）<br>
+        • 附第三方检测报告（信任度+30%）<br>
+        • 认证等级明确（ISO Class X）<br>
+        • 场景化描述（SMT/晶圆/医疗）<br>
+        • 区分B端/C端版本分开定价
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== TAB: 数据图表 ====== -->
+<div id="tab-charts" class="tab-panel">
+  <div class="sec-title">各类目综合数据分析</div>
+  <div class="chart-grid">
+    <div class="chart-box">
+      <div class="chart-title">📊 电商热度 vs 平均毛利率</div>
+      <div class="chart-wrap"><canvas id="chart1"></canvas></div>
+    </div>
+    <div class="chart-box">
+      <div class="chart-title">🎯 品类推荐优先级雷达图</div>
+      <div class="chart-wrap"><canvas id="chart2"></canvas></div>
+    </div>
+    <div class="chart-box">
+      <div class="chart-title">📈 市场规模占比（预估）</div>
+      <div class="chart-wrap"><canvas id="chart3"></canvas></div>
+    </div>
+    <div class="chart-box">
+      <div class="chart-title">💰 参数化程度 vs 转化率提升</div>
+      <div class="chart-wrap"><canvas id="chart4"></canvas></div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== TAB: 拓品策略 ====== -->
+<!-- ====== TAB: 份额&对比矩阵 ======-->
+<div id="tab-matrix" class="tab-panel">
+  <div class="sec-title">8大类目 × 9维参数对比矩阵</div>
+  <div class="matrix-wrap">
+    <table class="matrix-table">
+      <thead><tr>
+        <th>类目</th><th>电商热度</th><th>毛利率</th><th>月搜索量</th><th>线上GMV(亿)</th><th>白牌占比</th><th>C端潜力</th><th>B端依赖</th><th>复购率</th><th>优先级</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="text-align:left;font-weight:700;">🖐 人体防静电装备</td><td><span class="stars">★★★★★</span></td><td>45%</td><td>80万+</td><td>15-25</td><td>30%</td><td><span class="stars">★★★★★</span></td><td><span class="stars">★★★</span></td><td><span class="stars">★★★★★</span></td><td><span class="p-tag p1">P0</span></td></tr>
+        <tr><td style="text-align:left;font-weight:700;">🌬 静电消除设备</td><td><span class="stars">★★★</span></td><td>50%</td><td>3万+</td><td>3-5</td><td>20%</td><td><span class="stars">★★</span></td><td><span class="stars">★★★★★</span></td><td><span class="stars">★★</span></td><td><span class="p-tag p2">P2</span></td></tr>
+        <tr><td style="text-align:left;font-weight:700;">🛠 防静电工具器具</td><td><span class="stars">★★★★★</span></td><td>52%</td><td>15万+</td><td>3-5</td><td>45%</td><td><span class="stars">★★★★★</span></td><td><span class="stars">★★★</span></td><td><span class="stars">★★★★</span></td><td><span class="p-tag p1">P0</span></td></tr>
+        <tr><td style="text-align:left;font-weight:700;">📦 防静电包装材料</td><td><span class="stars">★★★★★</span></td><td>30%</td><td>15万+</td><td>2-4</td><td>35%</td><td><span class="stars">★★★</span></td><td><span class="stars">★★★★</span></td><td><span class="stars">★★★★★</span></td><td><span class="p-tag p2">P1</span></td></tr>
+        <tr><td style="text-align:left;font-weight:700;">🧪 检测仪器</td><td><span class="stars">★★★</span></td><td>57%</td><td>3万+</td><td>2-4</td><td>10%</td><td><span class="stars">★★</span></td><td><span class="stars">★★★★</span></td><td><span class="stars">★★</span></td><td><span class="p-tag p2">P2</span></td></tr>
+        <tr><td style="text-align:left;font-weight:700;">🏢 防静电地坪材料</td><td><span class="stars">★★</span></td><td>40%</td><td>2万+</td><td>2-4</td><td>15%</td><td><span class="stars">★</span></td><td><span class="stars">★★★★★</span></td><td><span class="stars">★</span></td><td><span class="p-tag p3">P3</span></td></tr>
+        <tr><td style="text-align:left;font-weight:700;">🥼 无尘洁净防护服</td><td><span class="stars">★★★★</span></td><td>45%</td><td>35万+</td><td>12-20</td><td>25%</td><td><span class="stars">★★★</span></td><td><span class="stars">★★★★</span></td><td><span class="stars">★★★★</span></td><td><span class="p-tag p1">P0</span></td></tr>
+        <tr><td style="text-align:left;font-weight:700;">🧹 洁净室耗材</td><td><span class="stars">★★★★★</span></td><td>52%</td><td>30万+</td><td>5-8</td><td>30%</td><td><span class="stars">★★★★★</span></td><td><span class="stars">★★★★</span></td><td><span class="stars">★★★★★</span></td><td><span class="p-tag p1">P0</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sec-title">品牌市场份额对比（天猫+京东 线上GMV占比估算）</div>
+  <div class="matrix-wrap">
+    <table class="matrix-table">
+      <thead><tr><th>品牌</th><th>国别</th><th>线上份额</th><th>强势品类</th><th>价格定位</th><th>品牌力</th><th>增长趋势</th></tr></thead>
+      <tbody>
+        <tr><td style="text-align:left;font-weight:700;">3M</td><td>🇺🇸 美国</td><td>~15%</td><td>无尘服·手套·口罩·耗材</td><td>高端</td><td><span class="stars">★★★★★</span></td><td style="color:#059669;">↑ 稳定</td></tr>
+        <tr><td style="text-align:left;font-weight:700;">杜邦/DuPont</td><td>🇺🇸 美国</td><td>~12%</td><td>无尘服(Tyvek)·无尘布</td><td>高端</td><td><span class="stars">★★★★★</span></td><td style="color:#059669;">↑ 稳定</td></tr>
+        <tr><td style="text-align:left;font-weight:700;">金佰利</td><td>🇺🇸 美国</td><td>~10%</td><td>无尘布·无尘纸·手套</td><td>中高端</td><td><span class="stars">★★★★★</span></td><td style="color:#059669;">↑ 稳定</td></tr>
+        <tr><td style="text-align:left;font-weight:700;">安思尔/Ansell</td><td>🇦🇺 澳洲</td><td>~8%</td><td>防静电手套</td><td>中高端</td><td><span class="stars">★★★★</span></td><td style="color:#059669;">↑</td></tr>
+        <tr><td style="text-align:left;font-weight:700;">SIMCO</td><td>🇺🇸 美国</td><td>~5%</td><td>离子风机·静电消除器</td><td>高端</td><td><span class="stars">★★★★</span></td><td style="color:var(--muted);">→</td></tr>
+        <tr style="background:#fef3c7;"><td style="text-align:left;font-weight:700;">沪试 (国产TOP1)</td><td>🇨🇳 中国</td><td><strong>~10%</strong></td><td>全品类（耗材为主）</td><td>中端</td><td><span class="stars">★★★★</span></td><td style="color:#d97706;">↑↑ 快速增长</td></tr>
+        <tr><td style="text-align:left;font-weight:700;">苏净集团</td><td>🇨🇳 中国</td><td>~6%</td><td>FFU·风淋室·粒子计数器</td><td>中端</td><td><span class="stars">★★★★</span></td><td style="color:#d97706;">↑ 国产替代</td></tr>
+        <tr><td style="text-align:left;font-weight:700;">大连思创</td><td>🇨🇳 中国</td><td>~5%</td><td>无尘服·无尘布·耗材</td><td>中端</td><td><span class="stars">★★★</span></td><td style="color:#059669;">↑</td></tr>
+        <tr><td style="text-align:left;font-weight:700;">贝尔克</td><td>🇨🇳 中国</td><td>~4%</td><td>桌垫·手环·工具</td><td>中端</td><td><span class="stars">★★★</span></td><td style="color:#059669;">↑</td></tr>
+        <tr style="background:#fee2e2;"><td style="text-align:left;font-weight:700;">白牌/其他 ⚠️</td><td>🇨🇳 中国</td><td><strong>~25%</strong></td><td>耗材·包装袋·工具</td><td>低端</td><td><span class="stars">★★</span></td><td style="color:#dc2626;">↓ 品牌化蚕食</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:11px;color:var(--muted);margin-top:10px;">⚠️ 白牌占比25% = 品牌化最大机会空间。国产头部品牌(沪试+苏净+思创+贝尔克)合计约25%，与国际品牌群(3M+杜邦+金佰利+Ansell+SIMCO)合计约50%形成「25%白牌 vs 25%国产品牌 vs 50%国际品牌」三足鼎立格局。</p>
+  </div>
+
+  <div class="sec-title">进口 vs 国产竞争格局分析</div>
+  <div class="chart-grid">
+    <div class="chart-box">
+      <div class="chart-title">🏢 品牌线上GMV份额对比</div>
+      <div class="chart-wrap"><canvas id="chartBrand"></canvas></div>
+    </div>
+    <div class="chart-box">
+      <div class="chart-title">📊 进口 vs 国产 各品类份额</div>
+      <div class="chart-wrap"><canvas id="chartImport"></canvas></div>
+    </div>
+  </div>
+</div>
+
+
+<div id="tab-strategy" class="tab-panel">
+  <div class="sec-title">三阶段拓品 SOP</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot" style="background:#1a6fe8;"></div>
+      <div class="tl-phase">第一阶段 · 0–3个月</div>
+      <div class="tl-title">快速起盘：参数化快消品打爆款</div>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:10px;">选复购最高、门槛最低的高频消耗品，以详细参数标注建立信任，快速积累评价与店铺权重。</p>
+      <div class="tl-tags">
+        <span class="tl-tag">🖐 有绳腕带（1MΩ+导线材质标注）</span>
+        <span class="tl-tag">🛠 防静电台垫（双层结构+电阻值）</span>
+        <span class="tl-tag">🧹 无尘擦拭布（洁净等级+微粒数）</span>
+        <span class="tl-tag">🥼 无尘鞋套（面料克重+导电底）</span>
+        <span class="tl-tag">📦 防静电指套（无粉/有粉分款）</span>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:#00c9a7;"></div>
+      <div class="tl-phase">第二阶段 · 3–9个月</div>
+      <div class="tl-title">品系扩张：专业参数建立壁垒</div>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:10px;">在爆款基础上横向扩展品类，用精准参数定位（洁净等级、ESD标准）吸引专业B端客户，提升ARPU。</p>
+      <div class="tl-tags">
+        <span class="tl-tag">🌬 台式离子风机（DC型±10V参数）</span>
+        <span class="tl-tag">🧪 腕带测试仪（双插口+蜂鸣款）</span>
+        <span class="tl-tag">🧹 无尘棉签（PU泡棉头+IPA兼容）</span>
+        <span class="tl-tag">📦 防静电屏蔽袋（屏蔽效能≥40dB）</span>
+        <span class="tl-tag">🛠 防静电镊子套装（碳纤5件）</span>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:#f97316;"></div>
+      <div class="tl-phase">第三阶段 · 9–18个月</div>
+      <div class="tl-title">专业化升级：认证+定制锁定大客户</div>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:10px;">引入第三方认证报告、推出定制品，将一次性客户转化为企业长期采购合同，建立高门槛壁垒。</p>
+      <div class="tl-tags">
+        <span class="tl-tag">🥼 无尘服定制（颜色+绣Logo+ISO认证）</span>
+        <span class="tl-tag">🌬 悬挂式离子风机（B端工程项目）</span>
+        <span class="tl-tag">🧪 ESD离子平衡测试仪（高端认证）</span>
+        <span class="tl-tag">🏢 防静电地垫定制（尺寸+接地方案）</span>
+        <span class="tl-tag">📐 整体ESD防护方案（一站式报价）</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-title">参数化选品的核心价值</div>
+  <div class="insight-grid">
+    <div class="insight-card blue">
+      <h4>📋 参数标注 = 信任溢价</h4>
+      <p>明确标注表面电阻值、洁净等级、检测标准的商品，相比模糊描述产品，买家询价转化率高出30–50%；专业B端客户直接以此为筛选条件。</p>
+    </div>
+    <div class="insight-card green">
+      <h4>🔬 第三方报告 = 护城河</h4>
+      <p>提供IEC/ANSI/ISO等权威标准的第三方检测报告，可有效区隔低价竞品，吸引对质量要求严苛的半导体、医疗行业客户。</p>
+    </div>
+    <div class="insight-card orange">
+      <h4>🎯 场景化参数 = 精准流量</h4>
+      <p>将参数与应用场景绑定（"SMT贴片专用-碳纤维5件套-10⁴Ω"），搜索精准度高，转化率比泛词高2–3倍，降低广告ROI压力。</p>
+    </div>
+    <div class="insight-card red">
+      <h4>⚠️ 参数门槛 = 差评护盾</h4>
+      <p>清晰的参数设定让买家买到正确产品，避免因误购引发差评；同时可通过参数分级（入门/专业/高端）实现价格分层，保护利润空间。</p>
+    </div>
+  </div>
+</div>
+
+</div><!-- container -->
+
 <footer>
-  <p>⚡ 静电无尘行业 · 电商拓展调研报告 v1.1 | 数据来源：天猫/京东/1688公开数据 + 行业报告 · 2026年6月</p>
-  <p style="margin-top:6px;"><a href="https://github.com/zxb20262026/esd-cleanroom-research" target="_blank">GitHub</a> · <a href="index.html">返回首页</a> · Made with ⚡️</p>
+  <p>⚡ 静电无尘行业品类参数深度调研 v2.0 · 2026融合版 | 数据仅供选品参考，具体参数以产品实测为准</p>
 </footer>
-<button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
-<script>window.addEventListener('scroll',()=>{document.getElementById('scrollTopBtn').classList.toggle('visible',window.scrollY>400)});</script><script>
-(function(){var p=location.pathname.split('/').pop()||'index.html';document.querySelectorAll('.nav a').forEach(function(a){if(a.getAttribute('href')===p)a.classList.add('active')});})();
-</script></body></html>
+
+<script>
+function switchTab(id, btn) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  btn.classList.add('active');
+}
+
+function toggleCat(head) {
+  const body = head.nextElementSibling;
+  const arrow = head.querySelector('.cat-section-arrow');
+  body.classList.toggle('open');
+  arrow.classList.toggle('open');
+}
+
+function toggleSku(head) {
+  const params = head.nextElementSibling;
+  const btn = head.querySelector('.sku-toggle-btn');
+  params.classList.toggle('open');
+  if (params.classList.contains('open')) {
+    btn.textContent = '收起参数 ▴';
+  } else {
+    btn.textContent = '展开参数 ▾';
+  }
+}
+
+// ===== CHARTS =====
+window.addEventListener('load', function() {
+  const labels = ['人体防静电装备','静电消除设备','防静电工具','防静电包装','检测仪器','地坪材料','无尘防护服','洁净室耗材'];
+  const colors = ['#3b82f6','#10b981','#8b5cf6','#f97316','#06b6d4','#ec4899','#22c55e','#0ea5e9'];
+
+  // Chart 1: 热度 vs 毛利
+  new Chart(document.getElementById('chart1'), {
+    type: 'bar',
+    data: {
+      labels: labels,
+      datasets: [
+        { label: '电商热度(1-5)', data: [5,4,5,5,3,2,4,5], backgroundColor: 'rgba(26,111,232,0.7)', borderRadius: 6 },
+        { label: '平均毛利率(%)', data: [45,50,52,30,57,40,45,52], backgroundColor: 'rgba(0,201,167,0.7)', borderRadius: 6 }
+      ]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'top', labels: { font: { size: 11 } } } }, scales: { y: { beginAtZero: true } } }
+  });
+
+  // Chart 2: 雷达
+  new Chart(document.getElementById('chart2'), {
+    type: 'radar',
+    data: {
+      labels: ['市场规模','复购频率','毛利率','进入难度低','C端潜力','B端潜力'],
+      datasets: [
+        { label: '人体ESD装备', data: [4,5,4,5,5,4], borderColor:'#3b82f6', backgroundColor:'rgba(59,130,246,0.15)', pointBackgroundColor:'#3b82f6' },
+        { label: '洁净室耗材', data: [5,5,5,5,4,5], borderColor:'#10b981', backgroundColor:'rgba(16,185,129,0.15)', pointBackgroundColor:'#10b981' },
+        { label: '静电消除设备', data: [3,2,5,2,2,5], borderColor:'#f97316', backgroundColor:'rgba(249,115,22,0.15)', pointBackgroundColor:'#f97316' }
+      ]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'top', labels: { font: { size: 11 } } } }, scales: { r: { min: 0, max: 5, ticks: { stepSize: 1 } } } }
+  });
+
+  // Chart 3: 饼图
+  new Chart(document.getElementById('chart3'), {
+    type: 'doughnut',
+    data: {
+      labels: labels,
+      datasets: [{ data: [22, 18, 20, 15, 8, 5, 8, 4], backgroundColor: colors, borderWidth: 2, borderColor: '#fff' }]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'right', labels: { font: { size: 10 }, boxWidth: 12 } } } }
+  });
+
+  // Chart 4: 参数化 vs 转化率
+  new Chart(document.getElementById('chart4')
+  // Chart 5: Brand share
+  new Chart(document.getElementById('chartBrand'),{type:'bar',data:{labels:['3M','杜邦','金佰利','安思尔','SIMCO','沪试','苏净','思创','贝尔克','白牌'],datasets:[{label:'线上份额(%)',data:[15,12,10,8,5,10,6,5,4,25],backgroundColor:['#1a6fe8','#1a6fe8','#1a6fe8','#1a6fe8','#1a6fe8','#f97316','#f97316','#f97316','#f97316','#94a3b8'],borderRadius:4}]},options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{beginAtZero:true,max:30}}}});
+
+  // Chart 6: Import vs Domestic share by category
+  new Chart(document.getElementById('chartImport'),{type:'bar',data:{labels:['人体ESD','静电消除','防静电工具','包装材料','检测仪器','洁净防护服','洁净室耗材'],datasets:[{label:'进口品牌占比(%)',data:[55,65,30,20,70,45,40],backgroundColor:'#1a6fe8',borderRadius:4},{label:'国产品牌占比(%)',data:[45,35,70,80,30,55,60],backgroundColor:'#f97316',borderRadius:4}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'top',labels:{font:{size:11}}}},scales:{x:{stacked:true},y:{stacked:true,beginAtZero:true,max:100}}}});
+, {
+    type: 'bar',
+    data: {
+      labels: ['无参数\n笼统描述','仅材质\n参数','材质+\n尺寸规格','+认证标准','+场景说明','+检测报告\n完整参数'],
+      datasets: [{ label: '相对转化率提升(%)', data: [0, 15, 30, 50, 65, 90], backgroundColor: ['#94a3b8','#60a5fa','#34d399','#fbbf24','#fb923c','#1a6fe8'], borderRadius: 6 }]
+    },
+    options: { responsive: true, maintainAspectRatio: false, indexAxis: 'y', plugins: { legend: { display: false } }, scales: { x: { beginAtZero: true, max: 100, ticks: { callback: v => v + '%' } } } }
+  });
+});
+</script>
+</body>
+</html>
