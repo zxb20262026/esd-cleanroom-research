@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>静电无尘行业 · 电商拓展调研</title><style>
+:root{--bg:#0d1117;--bg-card:#161b22;--border:#30363d;--text:#e6edf3;--text-secondary:#8b949e;--text-tertiary:#6e7681;--accent:#58a6ff;--accent2:#3fb950;--accent3:#d2991d;--accent5:#a371f7;--accent6:#79c0ff;--danger:#f85149;--radius:12px;--radius-sm:8px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+.nav{position:sticky;top:0;z-index:100;background:rgba(13,17,23,0.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:8px 16px;display:flex;align-items:center;gap:6px;overflow-x:auto}
+.nav-brand{font-weight:700;font-size:14px;white-space:nowrap;background:linear-gradient(135deg,var(--accent),var(--accent5));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.nav a{color:var(--text-secondary);text-decoration:none;font-size:11px;white-space:nowrap;padding:3px 7px;border-radius:5px;transition:all 0.2s}
+.nav a:hover{color:var(--text);background:var(--bg-card)}
+.nav a.active{color:var(--accent);background:rgba(88,166,255,0.1)}
+.nav .sep{color:var(--border);margin:0 1px;font-size:9px}
+.container{max-width:1100px;margin:0 auto;padding:20px}
+.hero{text-align:center;padding:40px 20px 30px;background:linear-gradient(180deg,rgba(88,166,255,0.06) 0%,transparent 100%);border-bottom:1px solid var(--border);margin-bottom:28px}
+.hero h1{font-size:26px;font-weight:800;margin-bottom:8px;background:linear-gradient(135deg,#58a6ff,#a371f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero .subtitle{color:var(--text-secondary);font-size:14px}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px;margin:20px 0}
+.card-link{display:block;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:16px 14px;text-decoration:none;transition:all 0.2s}
+.card-link:hover{border-color:var(--accent);background:var(--bg-card);transform:translateY(-2px)}
+.card-link .card-emoji{font-size:28px;margin-bottom:6px}
+.card-link .card-title{color:var(--text);font-size:14px;font-weight:700;margin-bottom:3px}
+.card-link .card-desc{color:var(--text-secondary);font-size:11px}
+.page-title{font-size:22px;font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.tag{font-size:11px;padding:1px 8px;border-radius:10px;font-weight:600;white-space:nowrap}
+.tag-hot{background:rgba(248,81,73,0.15);color:var(--danger)}
+.tag-mid{background:rgba(210,153,29,0.15);color:var(--accent3)}
+.tag-low{background:rgba(110,118,129,0.15);color:var(--text-tertiary)}
+.tag-new{background:rgba(163,113,247,0.15);color:var(--accent5)}
+.badge{display:inline-block;padding:1px 7px;border-radius:8px;font-size:10px;font-weight:600;white-space:nowrap}
+.badge-green{background:rgba(63,185,80,0.15);color:var(--accent2)}
+.badge-yellow{background:rgba(210,153,29,0.15);color:var(--accent3)}
+.price-range{font-family:'SF Mono',monospace;font-size:11px;color:var(--accent6);white-space:nowrap}
+.analysis-box{background:rgba(88,166,255,0.04);border:1px solid rgba(88,166,255,0.15);border-radius:var(--radius-sm);padding:14px 18px;margin-top:16px}
+.analysis-box h4{color:var(--accent);font-size:13px;margin-bottom:6px}
+.analysis-box p{font-size:12px;color:var(--text-secondary)}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:12px}
+th{text-align:left;padding:8px 10px;background:rgba(255,255,255,0.04);border-bottom:2px solid var(--border);color:var(--text-secondary);font-weight:600;font-size:10px;text-transform:uppercase;white-space:nowrap}
+td{padding:8px 10px;border-bottom:1px solid var(--border);vertical-align:top}
+tr:hover td{background:rgba(255,255,255,0.02)}
+.exec{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px 24px;margin-bottom:24px}
+.exec h2{font-size:17px;margin-bottom:10px;color:var(--accent2)}
+.exec p{font-size:13px;color:var(--text-secondary)}
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:14px}
+.mcard{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:var(--radius-sm);padding:12px;text-align:center}
+.mcard .val{font-size:20px;font-weight:700;color:var(--accent)}
+.mcard .lab{font-size:10px;color:var(--text-secondary);margin-top:3px}
+.priority-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin:16px 0}
+.pcard{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:16px;border-left:3px solid var(--accent2)}
+.pcard.p2{border-left-color:var(--accent3)}
+.pcard h4{font-size:13px;margin-bottom:6px}
+.pcard p{font-size:11px;color:var(--text-secondary)}
+footer{text-align:center;padding:28px 20px;border-top:1px solid var(--border);margin-top:40px;color:var(--text-tertiary);font-size:11px}
+footer a{color:var(--accent)}
+.scroll-top{position:fixed;bottom:20px;right:20px;width:38px;height:38px;border-radius:50%;background:var(--accent);color:#fff;border:none;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.3s;z-index:99}
+.scroll-top.visible{opacity:1}
+.toc{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:20px}
+.toc a{padding:3px 10px;border:1px solid var(--border);border-radius:14px;font-size:11px;color:var(--text-secondary);text-decoration:none;transition:all 0.2s}
+.toc a:hover{border-color:var(--accent);color:var(--accent)}
+@media(max-width:768px){.container{padding:14px 10px}table{display:block;overflow-x:auto}.card-grid{grid-template-columns:repeat(2,1fr)}}
+</style></head>
+<body><nav class="nav">
+  <a href="index.html" class="nav-brand">⚡ 静电无尘 · 电商调研</a>
+  <span class="sep">|</span>
+  <a href="index.html">🏠首页</a>
+  <a href="cleanroom-suit.html">👕无尘服</a>
+  <a href="esd-gloves.html">🧤手套</a>
+  <a href="esd-shoes.html">👟鞋</a>
+  <a href="esd-mat.html">🟩桌垫</a>
+  <a href="ion-fan.html">⚡风机</a>
+  <a href="esd-wristband.html">⌚手环</a>
+  <a href="cleanroom-wipes.html">🧻无尘布</a>
+  <a href="cleanroom-consumables.html">😷耗材</a>
+  <a href="ffu-air-shower.html">🏗️FFU</a>
+  <a href="esd-bag.html">📦包装袋</a>
+  <a href="particle-counter.html">🔬检测仪</a>
+  <a href="esd-tools.html">🔧工具</a>
+</nav>
+<div class="hero">
+  <h1>⚡ 静电无尘行业 · 电商拓展调研</h1>
+  <p class="subtitle">12大品类 × 40+细分 · 防静电/洁净室全维度电商适销分析</p>
+</div>
+<div class="container">
+<section class="exec">
+  <h2>📊 执行摘要</h2>
+  <div class="metrics">
+    <div class="mcard"><div class="val">12</div><div class="lab">核心品类</div></div>
+    <div class="mcard"><div class="val">40+</div><div class="lab">二级细分子类</div></div>
+    <div class="mcard"><div class="val">800亿+</div><div class="lab">中国洁净室耗材市场</div></div>
+    <div class="mcard"><div class="val">20%</div><div class="lab">线上渗透率(增长中)</div></div>
+    <div class="mcard"><div class="val">¥50-300</div><div class="lab">电商黄金价格带</div></div>
+  </div>
+  <p>静电无尘(ESD/Cleanroom)行业是<strong>半导体、电子制造、医药、食品</strong>等领域的刚需配套产业。线上渗透率从12%升至20%，<strong>品牌化空间巨大</strong>（白牌占比30-45%）。核心策略：<strong>以耗材走量建立客户池 → 设备/仪器提升客单价 → 一站式洁净室方案</strong>。</p>
+</section>
+
+<section>
+  <h2 style="font-size:18px;margin-bottom:14px;">🗂️ 12大品类快速导航</h2>
+  
+  <h3 style="font-size:14px;color:var(--accent);margin:16px 0 10px;">🧑‍🔬 人体防护（3品类）</h3>
+  <div class="card-grid">
+    <a href="cleanroom-suit.html" class="card-link"><div class="card-emoji">👕</div><div class="card-title">无尘服/防静电服</div><div class="card-desc">人体防护第一大品类</div><div style="margin-top:6px"><span class="tag tag-hot" style="font-size:10px;">核心品类</span></div></a>
+    <a href="esd-gloves.html" class="card-link"><div class="card-emoji">🧤</div><div class="card-title">防静电手套</div><div class="card-desc">耗材第一高频复购</div><div style="margin-top:6px"><span class="tag tag-hot" style="font-size:10px;">高频复购</span></div></a>
+    <a href="esd-shoes.html" class="card-link"><div class="card-emoji">👟</div><div class="card-title">防静电鞋/无尘鞋</div><div class="card-desc">工厂标配刚需</div><div style="margin-top:6px"><span class="tag tag-hot" style="font-size:10px;">刚需品类</span></div></a>
+  </div>
+
+  <h3 style="font-size:14px;color:var(--accent3);margin:16px 0 10px;">🛠️ 耗材工具（6品类）</h3>
+  <div class="card-grid">
+    <a href="esd-mat.html" class="card-link"><div class="card-emoji">🟩</div><div class="card-title">防静电桌垫/地板</div><div class="card-desc">工作台标配</div><div style="margin-top:6px"><span class="tag tag-mid" style="font-size:10px;">工作台标配</span></div></a>
+    <a href="esd-wristband.html" class="card-link"><div class="card-emoji">⌚</div><div class="card-title">防静电手环</div><div class="card-desc">最低门槛ESD产品</div><div style="margin-top:6px"><span class="tag tag-hot" style="font-size:10px;">低客单走量</span></div></a>
+    <a href="cleanroom-wipes.html" class="card-link"><div class="card-emoji">🧻</div><div class="card-title">无尘布/无尘纸</div><div class="card-desc">耗材之王</div><div style="margin-top:6px"><span class="tag tag-hot" style="font-size:10px;">耗材之王</span></div></a>
+    <a href="cleanroom-consumables.html" class="card-link"><div class="card-emoji">😷</div><div class="card-title">洁净室耗材</div><div class="card-desc">口罩/帽子/鞋套</div><div style="margin-top:6px"><span class="tag tag-hot" style="font-size:10px;">刚需走量</span></div></a>
+    <a href="esd-bag.html" class="card-link"><div class="card-emoji">📦</div><div class="card-title">防静电包装袋</div><div class="card-desc">电子元器件包装刚需</div><div style="margin-top:6px"><span class="tag tag-mid" style="font-size:10px;">白牌蓝海</span></div></a>
+    <a href="esd-tools.html" class="card-link"><div class="card-emoji">🔧</div><div class="card-title">防静电工具</div><div class="card-desc">镊子/刷子/周转箱</div><div style="margin-top:6px"><span class="tag tag-mid" style="font-size:10px;">长尾品类</span></div></a>
+  </div>
+
+  <h3 style="font-size:14px;color:var(--accent5);margin:16px 0 10px;">🏭 环境控制 & 检测（3品类）</h3>
+  <div class="card-grid">
+    <a href="ion-fan.html" class="card-link"><div class="card-emoji">⚡</div><div class="card-title">离子风机/消除器</div><div class="card-desc">静电控制核心设备</div><div style="margin-top:6px"><span class="tag tag-mid" style="font-size:10px;">高客单价</span></div></a>
+    <a href="ffu-air-shower.html" class="card-link"><div class="card-emoji">🏗️</div><div class="card-title">FFU/风淋室</div><div class="card-desc">洁净室核心设备</div><div style="margin-top:6px"><span class="tag tag-mid" style="font-size:10px;">大客单价</span></div></a>
+    <a href="particle-counter.html" class="card-link"><div class="card-emoji">🔬</div><div class="card-title">粒子计数器/检测仪</div><div class="card-desc">洁净度检测仪器</div><div style="margin-top:6px"><span class="tag tag-low" style="font-size:10px;">专业仪器</span></div></a>
+  </div>
+</section>
+
+<section style="margin-top:32px;">
+  <h2 style="font-size:18px;margin-bottom:14px;">⭐ 优先级推荐 & 拓展路线图</h2>
+  <div class="priority-grid">
+    <div class="pcard"><h4>🥇 P0：耗材三大件（立即启动）</h4><p>无尘布 + 防静电手套 + 洁净室耗材(口罩/帽/鞋套)。高频复购、低门槛、白牌多。月搜总量50万+，GMV 15-25亿/年。</p></div>
+    <div class="pcard"><h4>🥇 P0：人体防护套装</h4><p>无尘服 + 防静电鞋组合套装 ¥100-300。与耗材形成'洁净室入门包'，客单价翻3倍。月搜30万+。</p></div>
+    <div class="pcard p2"><h4>🥈 P1：ESD工位方案（3个月后）</h4><p>桌垫 + 手环 + 镊子 + 离子风机 组合销售。从卖产品到卖'防静电工位整体方案'，客单价¥500-1500。</p></div>
+    <div class="pcard p2"><h4>🥈 P1：防静电包装袋</h4><p>白牌占比35%的蓝海。多尺寸矩阵+可定制印刷，锁定电子元器件厂复购。¥10-50/100个走量。</p></div>
+    <div class="pcard p2"><h4>🥉 P2：检测仪器（6个月后）</h4><p>表面电阻测试仪+静电场测试仪 ¥300-1500，配校准服务。粒子计数器中远期。</p></div>
+    <div class="pcard p2"><h4>🥉 P2：模块化洁净棚</h4><p>¥3000-8000，面向初创电子厂/实验室。FFU/风淋室线上询价引流。</p></div>
+  </div>
+</section>
+
+<section style="margin-top:32px;">
+  <h2 style="font-size:18px;margin-bottom:14px;">📋 全品类速览表</h2>
+  <table style="font-size:11px;">
+  <thead><tr><th>品类</th><th>核心价格带</th><th>月搜索热度</th><th>线上GMV估算</th><th>白牌占比</th><th>推荐优先级</th></tr></thead>
+  <tbody>
+  <tr><td>👕 无尘服/防静电服</td><td class="price-range">¥50-300</td><td>30万+</td><td>8-12亿</td><td>25%</td><td><span class="badge badge-green">P0</span></td></tr>
+  <tr><td>🧤 防静电手套</td><td class="price-range">¥15-60/盒</td><td>30万+</td><td>5-8亿</td><td>35%</td><td><span class="badge badge-green">P0</span></td></tr>
+  <tr><td>👟 防静电鞋</td><td class="price-range">¥30-100</td><td>15万+</td><td>3-5亿</td><td>30%</td><td><span class="badge badge-green">P0</span></td></tr>
+  <tr><td>🧻 无尘布/无尘纸</td><td class="price-range">¥15-50/包</td><td>25万+</td><td>4-7亿</td><td>30%</td><td><span class="badge badge-green">P0</span></td></tr>
+  <tr><td>😷 洁净室耗材</td><td class="price-range">¥10-50/盒</td><td>25万+</td><td>3-5亿</td><td>40%</td><td><span class="badge badge-green">P0</span></td></tr>
+  <tr><td>⌚ 防静电手环</td><td class="price-range">¥5-30</td><td>20万+</td><td>0.5-1亿</td><td>45%</td><td><span class="badge badge-yellow">P1</span></td></tr>
+  <tr><td>🟩 防静电桌垫</td><td class="price-range">¥50-150/㎡</td><td>5万+</td><td>1-2亿</td><td>25%</td><td><span class="badge badge-yellow">P1</span></td></tr>
+  <tr><td>📦 防静电包装袋</td><td class="price-range">¥10-50/100个</td><td>15万+</td><td>1-2亿</td><td>35%</td><td><span class="badge badge-yellow">P1</span></td></tr>
+  <tr><td>🔧 防静电工具</td><td class="price-range">¥10-50</td><td>10万+</td><td>1-2亿</td><td>45%</td><td><span class="badge badge-yellow">P1</span></td></tr>
+  <tr><td>⚡ 离子风机</td><td class="price-range">¥200-1000</td><td>2万+</td><td>1-2亿</td><td>20%</td><td><span class="badge badge-yellow">P2</span></td></tr>
+  <tr><td>🏗️ FFU/风淋室</td><td class="price-range">¥1000-3000</td><td>1万+</td><td>2-4亿</td><td>15%</td><td><span class="badge badge-yellow">P2</span></td></tr>
+  <tr><td>🔬 粒子计数器</td><td class="price-range">¥2000-8000</td><td>1万+</td><td>1-3亿</td><td>10%</td><td><span class="badge badge-yellow">P2</span></td></tr>
+  </tbody></table>
+  <p style="font-size:10px;color:var(--text-tertiary);margin-top:8px;">※ 搜索热度和GMV为多维度估算，非平台官方数据</p>
+</section>
+
+</div>
+<footer>
+  <p>⚡ 静电无尘行业 · 电商拓展调研报告 v1.0 | 数据来源：天猫/京东/1688公开数据 + 行业报告 · 2026年6月</p>
+  <p style="margin-top:6px;"><a href="https://github.com/zxb20262026/esd-cleanroom-research" target="_blank">GitHub</a> · <a href="index.html">返回首页</a> · Made with ⚡️</p>
+</footer>
+<button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script>window.addEventListener('scroll',()=>{document.getElementById('scrollTopBtn').classList.toggle('visible',window.scrollY>400)});</script><script>
+(function(){var p=location.pathname.split('/').pop()||'index.html';document.querySelectorAll('.nav a').forEach(function(a){if(a.getAttribute('href')===p)a.classList.add('active')});})();
+</script></body></html>
